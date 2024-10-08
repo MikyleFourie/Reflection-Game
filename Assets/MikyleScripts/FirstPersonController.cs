@@ -13,6 +13,19 @@ public class FirstPersonController : MonoBehaviour
     float ySpeed;
     float gravity = 0.1f;
 
+    public static FirstPersonController Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this; // Set the singleton instance
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate
+        }
+    }
 
     void Start()
     {
