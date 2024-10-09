@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Museum.unity
     guid: 8b99f59437abfc84389bd1bc7a4c879d
+  - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: 4f6ea693da1dc094bb1e441d43f7123b
   m_configObjects: {}

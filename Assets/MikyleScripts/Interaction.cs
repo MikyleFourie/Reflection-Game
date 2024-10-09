@@ -12,7 +12,7 @@ public class Interaction : MonoBehaviour
     public FirstPersonController firstPersonController; // Reference to first-person controller script
     public TMPro.TMP_Text descriptionText; // Text component for displaying descriptions
 
-    private IInteractable currentInteractable; // Cache the current interactable object
+    public IInteractable currentInteractable; // Cache the current interactable object
 
     void Update()
     {
@@ -47,11 +47,12 @@ public class Interaction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactionDistance, interactableLayer))
         {
             var interactable = hit.transform.GetComponent<IInteractable>();
-
+            Debug.Log("item: " + hit.transform.name);
             if (interactable != null)
             {
                 currentInteractable = interactable; // Cache the interactable object
                 HighlightObject(hit.transform.gameObject); // Highlight the object if necessary
+                Debug.Log("currentInteractable: " + currentInteractable);
             }
             else
             {

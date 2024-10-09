@@ -17343,6 +17343,8 @@ GameObject:
   m_Component:
   - component: {fileID: 420321790}
   - component: {fileID: 420321791}
+  - component: {fileID: 420321793}
+  - component: {fileID: 420321792}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -17377,6 +17379,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478cee880ae66a54f85baaf6db909b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &420321792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420321788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa3fdf630134fb41a37c8d971eda8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1857751839}
+  speakerNameText: {fileID: 1176838548}
+  dialoguePanel: {fileID: 1414117573}
+--- !u!114 &420321793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420321788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e633062360d638c46b5462af545d6538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 420321792}
+  introDialogue: {fileID: 11400000, guid: eac38e8ce1623da4dae4961a937dbda0, type: 2}
+  fadePanel: {fileID: 1656989415}
+  fadeDuration: 4
+  crosshair: {fileID: 1690399760}
+  player: {fileID: 913445235}
 --- !u!1 &453444997
 GameObject:
   m_ObjectHideFlags: 0
@@ -17886,6 +17921,7 @@ MonoBehaviour:
   souvenirName: Trophy
   isLoadable: 0
   nextLevel: 
+  souvenirDialogue: {fileID: 0}
 --- !u!1 &455471447
 GameObject:
   m_ObjectHideFlags: 0
@@ -23223,8 +23259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   souvenirName: Key
-  isLoadable: 0
-  nextLevel: 
+  isLoadable: 1
+  nextLevel: LevelOne
+  souvenirDialogue: {fileID: 11400000, guid: 28fb154e6bd0f4443aac65352da128b2, type: 2}
 --- !u!1 &472837561
 GameObject:
   m_ObjectHideFlags: 0
@@ -23734,6 +23771,7 @@ MonoBehaviour:
   souvenirName: Music Box
   isLoadable: 0
   nextLevel: 
+  souvenirDialogue: {fileID: 0}
 --- !u!1001 &488037659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23742,6 +23780,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54408087}
     m_Modifications:
+    - target: {fileID: 2769556395820035526, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
+      propertyPath: sittingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 342b09d7b982a7c42aa1357d6fe3cf3d, type: 2}
     - target: {fileID: 5673653414517702353, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
       propertyPath: m_Name
       value: SeatLog (4)
@@ -24264,6 +24306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54408087}
     m_Modifications:
+    - target: {fileID: 2769556395820035526, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
+      propertyPath: sittingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 342b09d7b982a7c42aa1357d6fe3cf3d, type: 2}
     - target: {fileID: 5673653414517702353, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
       propertyPath: m_Name
       value: SeatLog (3)
@@ -48019,14 +48065,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913445235}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7666817, z: -0, w: 0.6420274}
-  m_LocalPosition: {x: 3.07, y: 1, z: -0.14}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16, y: 1, z: -9.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2080687943}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -100.114, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &913445241
 CharacterController:
   m_ObjectHideFlags: 0
@@ -48577,6 +48623,7 @@ MonoBehaviour:
   souvenirName: Blueprint
   isLoadable: 0
   nextLevel: 
+  souvenirDialogue: {fileID: 0}
 --- !u!43 &972620450
 Mesh:
   m_ObjectHideFlags: 0
@@ -48853,7 +48900,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028198033}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bb06011d7a088e48af245904d621b7c, type: 3}
   m_Name: 
@@ -51301,6 +51348,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54408087}
     m_Modifications:
+    - target: {fileID: 2769556395820035526, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
+      propertyPath: sittingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 342b09d7b982a7c42aa1357d6fe3cf3d, type: 2}
     - target: {fileID: 5673653414517702353, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
       propertyPath: m_Name
       value: SeatLog (2)
@@ -51513,7 +51564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.475, y: -397.757}
+  m_AnchoredPosition: {x: 0, y: -397.757}
   m_SizeDelta: {x: 1779.797, y: 189.114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857751839
@@ -51571,7 +51622,7 @@ MonoBehaviour:
   m_fontSizeMax: 25
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -52122,6 +52173,7 @@ MonoBehaviour:
   souvenirName: Locket
   isLoadable: 0
   nextLevel: 
+  souvenirDialogue: {fileID: 0}
 --- !u!1 &1883386829
 GameObject:
   m_ObjectHideFlags: 0
@@ -64270,13 +64322,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080687940}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.26950818, y: 0, z: 0, w: 0.9629981}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913445240}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -31.27, y: 0, z: 0}
 --- !u!114 &2080687944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64478,6 +64530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54408087}
     m_Modifications:
+    - target: {fileID: 2769556395820035526, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
+      propertyPath: sittingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 342b09d7b982a7c42aa1357d6fe3cf3d, type: 2}
     - target: {fileID: 5673653414517702353, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
       propertyPath: m_Name
       value: SeatLog (5)
@@ -64564,6 +64620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 54408087}
     m_Modifications:
+    - target: {fileID: 2769556395820035526, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
+      propertyPath: sittingDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 342b09d7b982a7c42aa1357d6fe3cf3d, type: 2}
     - target: {fileID: 5673653414517702353, guid: ac01b9308216c98459676bf1e32f32ac, type: 3}
       propertyPath: m_Name
       value: SeatLog (1)

@@ -9,16 +9,46 @@ public class Souvenir : MonoBehaviour, IInteractable
     public bool isLoadable = false;
     public string nextLevel;
 
+    public DialogueData souvenirDialogue;  // Reference to the dialogue data for sitting on the log
+    private DialogueManager dialogueManager;  // Reference to the DialogueManager
+    void Start()
+    {
+        // Automatically find and assign the DialogueManager in the scene
+        dialogueManager = FindObjectOfType<DialogueManager>();
+
+        if (dialogueManager == null)
+        {
+            Debug.LogError("DialogueManager not found in the scene! Please ensure it is present.");
+        }
+    }
     public void Interact()
     {
         // Code to display the souvenir description when interacted with
         Debug.Log("Interacting with souvenir: " + souvenirName);
 
-        // If this is the first souvenir, load the next level
+        // Start the dialogue and wait for it to finish if it's loadable
         if (isLoadable && !string.IsNullOrEmpty(nextLevel))
         {
-            LoadNextLevel();
+            StartCoroutine(HandleInteraction());
         }
+        else
+        {
+            // If not loadable, just show the dialogue
+            dialogueManager.StartDialogue(souvenirDialogue);
+        }
+    }
+
+    private IEnumerator HandleInteraction()
+    {
+        // Start the dialogue
+        dialogueManager.StartDialogue(souvenirDialogue);
+
+        // Wait for the dialogue to complete
+        yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
+
+
+        // Load the next level after the dialogue is finished
+        LoadNextLevel();
     }
 
     private void LoadNextLevel()
@@ -26,5 +56,6 @@ public class Souvenir : MonoBehaviour, IInteractable
         Debug.Log("Loading next level: " + nextLevel);
         SceneManager.LoadScene(nextLevel); // Load the next scene by name
     }
+
 }
 
