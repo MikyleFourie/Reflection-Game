@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfd4548f6a53f848a5d0e6ee668b0d0, type: 3}
+  m_Name: AlexDialogue
+  m_EditorClassIdentifier: 
+  speakerName: Alex
+  dialogueLines:
+  - "Well, well, looks like I\u2019ve got company. Ain\u2019t seen anyone stop by
+    in a while. What brings you here?"
+  isBranching: 1
+  choices:
+  - choiceText: "I\u2019m just passing through. Thought I\u2019d take a break."
+    nextDialogue: {fileID: 11400000, guid: 7b9bdb7b4ab800d4a85ed2719a041b08, type: 2}
+  - choiceText: "My RV\u2019s been giving me some trouble. Thought I\u2019d see if
+      you could help"
+    nextDialogue: {fileID: 11400000, guid: c73c32934ee6b9042adad9be8b1bd989, type: 2}
