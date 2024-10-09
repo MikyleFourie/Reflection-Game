@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class Log : MonoBehaviour, IInteractable
 {
-    public Vector3 sitPosition; // Position where the player will sit
-    public Vector3 sitLocalPosition; // Position where the player will sit
-    public Quaternion sitRotation; // Rotation where the player will sit
-    private bool isSitting = false; // Track whether the player is sitting
+    public bool isSitting = false; // Track whether the player is sitting
     public GameObject player;
+    public GameObject marker;
+    private FirstPersonController firstPersonController;
+    private Vector3 logForward;
+    private GameObject fireLight;
 
     void Start()
     {
-        player = FirstPersonController.Instance.gameObject;
-        sitPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-        sitLocalPosition = new Vector3(this.transform.localPosition.x, this.transform.localPosition.y, this.transform.localPosition.z);
-
-
+        fireLight = transform.parent.Find("FireLight")?.gameObject;
+        //AlignToFireLight(fireLight);
+        marker = this.transform.GetChild(0).gameObject; // Get the marker (child object)
+        player = FirstPersonController.Instance.gameObject; // Reference to the player
+        firstPersonController = player.GetComponent<FirstPersonController>(); // Get the FirstPersonController component
+        logForward = transform.right; // Local X-axis direction of the log
     }
+
     public void Interact()
     {
         // Call sit/stand functionality
@@ -34,25 +37,52 @@ public class Log : MonoBehaviour, IInteractable
 
     private void SitDown()
     {
-        sitRotation = player.transform.rotation;
-        sitRotation.y = this.transform.localEulerAngles.y;
-        Debug.Log(sitRotation.y);
-        Debug.Log(this.transform.localEulerAngles.y);
-        // Move the player to the sitting position
-        // Assuming you have a reference to the player in your Interaction script or globally
-        player.transform.position = sitLocalPosition; // Move to sit position
-        player.transform.rotation = sitRotation;
-        //FirstPersonController.Instance.transform.rotation = sitPosition.rotation; // Optional: Match rotation
+
+        // Move the player to the marker's position
+        player.transform.position = marker.transform.position; // Move to marker position
+        player.transform.rotation = Quaternion.LookRotation(logForward); // Align player to face log's local X-axis
+
+        firstPersonController.SetCanMove(false); //Disable Movement
+        firstPersonController.SetSittingLog(this); // Set this log as the current one
         isSitting = true; // Update sitting state
-        Debug.Log("Player is sitting down on the log.");
     }
 
     private void StandUp()
     {
-        // Move the player back to their original position (you may need to store the original position)
-        //FirstPersonController.Instance.transform.position += Vector3.up; // Adjust based on your game
+        firstPersonController.SetCanMove(true); //Disable Movement
         isSitting = false; // Update sitting state
         Debug.Log("Player is standing up from the log.");
     }
-}
 
+    public void PlayerStoodUp()
+    {
+        isSitting = false; // Update sitting state when notified by the FirstPersonController
+        Debug.Log("Log updated: player is no longer sitting.");
+    }
+
+    // Method to align the log to face the FireLight
+    private void AlignToFireLight(GameObject fireLight)
+    {
+        // Calculate the direction to the FireLight
+        Vector3 directionToFireLight = fireLight.transform.position - transform.position;
+
+        // Set the Y value of the direction to 0 to ignore pitch (X-axis rotation)
+        directionToFireLight.y = 0;
+
+        // Normalize the direction vector
+        directionToFireLight.Normalize();
+
+        // Calculate the new Y-axis rotation using the direction vector
+        // Inverting the Z component if necessary to correct alignment
+        float newYRotation = Mathf.Atan2(directionToFireLight.x, directionToFireLight.z) * Mathf.Rad2Deg;
+
+        // Create a new rotation that keeps the current X and Z rotation
+        Quaternion newRotation = Quaternion.Euler(transform.eulerAngles.x, newYRotation, transform.eulerAngles.z);
+
+        // Apply the new rotation to the log
+        transform.rotation = newRotation;
+
+        // Log the rotation for debugging
+        Debug.Log("Log's New Rotation: " + transform.rotation.eulerAngles);
+    }
+}
