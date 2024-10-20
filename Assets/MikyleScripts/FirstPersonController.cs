@@ -95,5 +95,26 @@ public class FirstPersonController : MonoBehaviour
             currentLog = null; // Clear the reference to the current log
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
+        {
+            Debug.Log("Entered Trigger of : " + other.name);
+            Outline outlineScript = other.GetComponent<Outline>();
+            outlineScript.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
+        {
+            Outline outlineScript = other.GetComponent<Outline>();
+            outlineScript.enabled = false;
+        }
+    }
 }
 

@@ -76,4 +76,6 @@ public class Interaction : MonoBehaviour
     {
         // Remove highlight logic, restoring original state
     }
+
+
 }
