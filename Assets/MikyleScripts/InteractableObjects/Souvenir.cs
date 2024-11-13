@@ -11,6 +11,7 @@ public class Souvenir : MonoBehaviour, IInteractable
 
     public DialogueData souvenirDialogue;  // Reference to the dialogue data for sitting on the log
     private DialogueManager dialogueManager;  // Reference to the DialogueManager
+    private SceneFader sceneFader;
     void Start()
     {
         // Automatically find and assign the DialogueManager in the scene
@@ -20,6 +21,11 @@ public class Souvenir : MonoBehaviour, IInteractable
         {
             Debug.LogError("DialogueManager not found in the scene! Please ensure it is present.");
         }
+
+        // Find the SceneFader in the scene
+        sceneFader = FindObjectOfType<SceneFader>();
+
+
     }
     public void Interact()
     {
@@ -46,6 +52,17 @@ public class Souvenir : MonoBehaviour, IInteractable
         // Wait for the dialogue to complete
         yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
 
+        //Fade Out
+        if (sceneFader != null)
+        {
+            sceneFader.StartFadeOut();
+        }
+        else
+        {
+            Debug.LogError("SceneFader not found in the scene");
+        }
+
+        yield return new WaitForSeconds(3);
 
         // Load the next level after the dialogue is finished
         LoadNextLevel();

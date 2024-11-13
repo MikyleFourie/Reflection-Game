@@ -17,6 +17,19 @@ public class FirstPersonController : MonoBehaviour
     public bool canMove = true;
     public static FirstPersonController Instance { get; private set; }
 
+    public Camera playerCamera;  // Reference to the player camera
+    public float bobbingSpeed = 0.02f;  // Speed of the bobbing
+    public float bobbingAmount = 0.05f; // How much the head bobs
+    float initialbobbingSpeed;  // Speed of the bobbing
+    float initialbobbingAmount; // How much the head bobs
+
+    private float defaultPosY = 0;
+    private float timer = 0;
+
+    public float fovangle = 25f;
+    public List<GameObject> interactableObjects;
+    IInteractable currentInteractable = null; // Cache the current interactable object
+
     void Awake()
     {
         if (Instance == null)
@@ -31,12 +44,29 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        defaultPosY = playerCamera.transform.localPosition.y; // Set default position Y
+        initialbobbingAmount = bobbingAmount;
+        initialbobbingSpeed = bobbingSpeed;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;  // Locks the cursor to the center of the screen
+        Cursor.visible = false;
     }
 
     void Update()
     {
+        if (interactableObjects.Count > 0)
+        {
+            CheckFOVInteractivity();
+        }
+
+        if (Input.GetMouseButtonDown(0) && currentInteractable != null)
+        {
+            currentInteractable.Interact(); // Call the interact method on the object
+            currentInteractable = null;
+        }
+
+
+
         // Allow standing up when sitting
         if (Input.GetKeyDown(KeyCode.Space) && !canMove)
         {
@@ -46,6 +76,7 @@ public class FirstPersonController : MonoBehaviour
 
         if (canMove)
         {
+            bobbingSpeed = initialbobbingSpeed;
             // Get mouse input for looking around
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -73,6 +104,50 @@ public class FirstPersonController : MonoBehaviour
             // Move the character
             controller.Move(move * Time.deltaTime);
         }
+        else
+        {
+            bobbingSpeed = 0f;
+        }
+    }
+
+    void CheckFOVInteractivity()
+    {
+        currentInteractable = null;
+        Debug.Log("Checking list");
+        foreach (var interactableObj in interactableObjects)
+        {
+            Outline outlineScript = interactableObj.GetComponent<Outline>();
+
+            Vector3 directionToObject = (interactableObj.transform.position - playerCamera.transform.position).normalized;
+            Vector3 forwardDirection = playerCamera.transform.forward;
+
+            float angleToTarget = Vector3.Angle(forwardDirection, directionToObject);
+            //Debug.Log("Angle to target: " + angleToTarget);
+            if (angleToTarget <= fovangle / 2)
+            {
+                //Object is within vision cone
+                //Debug.Log(interactableObj.name + " is in range");
+                currentInteractable = interactableObj.transform.GetComponent<IInteractable>();
+                outlineScript.OutlineColor = Color.cyan;
+                outlineScript.OutlineWidth = 10;
+            }
+            else
+            {
+                //Debug.Log(interactableObj.name + " is NOT in range");
+                outlineScript.OutlineColor = Color.white;
+                outlineScript.OutlineWidth = 6;
+            }
+
+            // At the end of the loop, if currentInteractableObject is null, there is no interactable in view.
+            if (currentInteractable == null)
+            {
+                Debug.Log("No interactable object in view");
+            }
+            else
+            {
+                Debug.Log("Current interactable object: " + currentInteractable);
+            }
+        }
     }
 
     public void SetCanMove(bool value)
@@ -96,12 +171,60 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private void HeadBob()
+    {
+        //Debug.Log(Time.deltaTime);
+        float waveslice = 0.0f;
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        // Check for movement
+        if (horizontal != 0 || vertical != 0)
+        {
+            waveslice = Mathf.Sin(timer);
+            timer += bobbingSpeed;
+            if (timer > Mathf.PI * 2)
+            {
+                timer -= Mathf.PI * 2;
+            }
+        }
+        else
+        {
+            timer = 0; // Reset timer if not moving
+        }
+
+        // Calculate the new position for bobbing
+        if (waveslice != 0)
+        {
+            float translateChange = waveslice * bobbingAmount;
+            playerCamera.transform.localPosition = new Vector3(
+                playerCamera.transform.localPosition.x,
+                defaultPosY + translateChange,
+                playerCamera.transform.localPosition.z
+            );
+
+            // Debugging output
+            //Debug.Log("Waveslice: " + waveslice);
+            //Debug.Log("Translate Change: " + translateChange);
+        }
+        else
+        {
+            // Reset to default position when player stops
+            playerCamera.transform.localPosition = new Vector3(
+                playerCamera.transform.localPosition.x,
+                defaultPosY,
+                playerCamera.transform.localPosition.z
+            );
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
         {
             Debug.Log("Entered Trigger of : " + other.name);
+            interactableObjects.Add(other.gameObject);
             Outline outlineScript = other.GetComponent<Outline>();
             outlineScript.enabled = true;
         }
@@ -112,6 +235,7 @@ public class FirstPersonController : MonoBehaviour
 
         if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
         {
+            interactableObjects.Remove(other.gameObject);
             Outline outlineScript = other.GetComponent<Outline>();
             outlineScript.enabled = false;
         }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
-    public float interactionDistance = 40f; // Max distance for interaction
+    public float interactionDistance; // Max distance for interaction
     public LayerMask interactableLayer = default; // Layer to identify interactable objects
     public GameObject descriptionPanel; // Reference to the description UI panel
     public GameObject aimPanel; // Crosshair/aim panel
@@ -13,10 +13,12 @@ public class Interaction : MonoBehaviour
     public TMPro.TMP_Text descriptionText; // Text component for displaying descriptions
 
     public IInteractable currentInteractable; // Cache the current interactable object
+    public string currentInteractableName;
 
     void Update()
     {
-        HandleCloseDescription();
+        //HandleCloseDescription();
+
         CheckForInteractable();
 
         // Handle interaction when the left mouse button is pressed
@@ -47,35 +49,29 @@ public class Interaction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactionDistance, interactableLayer))
         {
             var interactable = hit.transform.GetComponent<IInteractable>();
-            Debug.Log("item: " + hit.transform.name);
+            //Debug.Log("item: " + hit.transform.name);
             if (interactable != null)
             {
                 currentInteractable = interactable; // Cache the interactable object
-                HighlightObject(hit.transform.gameObject); // Highlight the object if necessary
+                currentInteractableName = hit.transform.name;
                 Debug.Log("currentInteractable: " + currentInteractable);
+
             }
             else
             {
+                currentInteractableName = "";
                 currentInteractable = null;
-                RemoveHighlight(hit.transform.gameObject); // Remove highlight when not looking at an interactable
             }
         }
         else
         {
+            currentInteractableName = "";
             currentInteractable = null; // Clear interactable when nothing is hit
         }
     }
 
-    // Example method to handle object highlighting
-    void HighlightObject(GameObject obj)
-    {
-        // Implement highlight logic, like changing material or adding an outline
-    }
 
-    void RemoveHighlight(GameObject obj)
-    {
-        // Remove highlight logic, restoring original state
-    }
+
 
 
 }
