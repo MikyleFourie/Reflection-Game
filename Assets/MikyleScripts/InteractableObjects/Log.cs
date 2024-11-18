@@ -12,8 +12,10 @@ public class Log : MonoBehaviour, IInteractable
     private Vector3 logForward;
     private GameObject fireLight;
 
-    public DialogueData sittingDialogue;  // Reference to the dialogue data for sitting on the log
-    private DialogueManager dialogueManager;  // Reference to the DialogueManager
+    //public DialogueData sittingDialogue;  // Reference to the dialogue data for sitting on the log
+    public DialogueNode startNode;
+    //private DialogueManager dialogueManager;  // Reference to the DialogueManager
+    private DialogueManager2 dialogueManager2;  // Reference to the DialogueManager
 
     void Start()
     {
@@ -25,9 +27,10 @@ public class Log : MonoBehaviour, IInteractable
         logForward = transform.right; // Local X-axis direction of the log
 
         // Automatically find and assign the DialogueManager in the scene
-        dialogueManager = FindObjectOfType<DialogueManager>();
+        //dialogueManager = FindObjectOfType<DialogueManager>();
+        dialogueManager2 = FindObjectOfType<DialogueManager2>();
 
-        if (dialogueManager == null)
+        if (dialogueManager2 == null)
         {
             Debug.LogError("DialogueManager not found in the scene! Please ensure it is present.");
         }
@@ -61,10 +64,11 @@ public class Log : MonoBehaviour, IInteractable
         Debug.Log("sitting func should start");
 
         // Start the dialogue when sitting down
-        if (dialogueManager != null && sittingDialogue != null)
+        if (dialogueManager2 != null && startNode != null)
         {
             Debug.Log("sitting dialogue should start");
-            dialogueManager.StartDialogue(sittingDialogue); // Start the dialogue
+            //dialogueManager.StartDialogue(sittingDialogue); // Start the dialogue
+            dialogueManager2.StartDialogue(startNode);
         }
     }
 

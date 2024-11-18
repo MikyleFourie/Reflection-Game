@@ -9,17 +9,21 @@ public class Souvenir : MonoBehaviour, IInteractable
     public bool isLoadable = false;
     public string nextLevel;
 
-    public DialogueData souvenirDialogue;  // Reference to the dialogue data for sitting on the log
-    private DialogueManager dialogueManager;  // Reference to the DialogueManager
+    //public DialogueData souvenirDialogue;  // Reference to the dialogue data for sitting on the log
+    //DialogueManager dialogueManager;  // Reference to the DialogueManager
+
+    public DialogueNode souvenirNode;
+    private DialogueManager2 dialogueManager2;
     private SceneFader sceneFader;
     void Start()
     {
         // Automatically find and assign the DialogueManager in the scene
-        dialogueManager = FindObjectOfType<DialogueManager>();
+        //dialogueManager = FindObjectOfType<DialogueManager>();
+        dialogueManager2 = FindObjectOfType<DialogueManager2>();
 
-        if (dialogueManager == null)
+        if (dialogueManager2 == null)
         {
-            Debug.LogError("DialogueManager not found in the scene! Please ensure it is present.");
+            Debug.LogError("DialogueManager2 not found in the scene! Please ensure it is present.");
         }
 
         // Find the SceneFader in the scene
@@ -35,22 +39,25 @@ public class Souvenir : MonoBehaviour, IInteractable
         // Start the dialogue and wait for it to finish if it's loadable
         if (isLoadable && !string.IsNullOrEmpty(nextLevel))
         {
-            StartCoroutine(HandleInteraction());
+            //StartCoroutine(HandleInteraction());
+            dialogueManager2.StartDialogue(souvenirNode);
         }
         else
         {
             // If not loadable, just show the dialogue
-            dialogueManager.StartDialogue(souvenirDialogue);
+            //dialogueManager.StartDialogue(souvenirDialogue);
+            dialogueManager2.StartDialogue(souvenirNode);
         }
     }
 
     private IEnumerator HandleInteraction()
     {
         // Start the dialogue
-        dialogueManager.StartDialogue(souvenirDialogue);
+        //dialogueManager.StartDialogue(souvenirDialogue);
+        dialogueManager2.StartDialogue(souvenirNode);
 
         // Wait for the dialogue to complete
-        yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
+        //yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
 
         //Fade Out
         if (sceneFader != null)

@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class CampfireSceneManager : MonoBehaviour
 {
-    public DialogueManager dialogueManager; // Reference to your Dialogue Manager
-    public DialogueData introDialogue; // Reference to the introductory dialogue
+    public DialogueManager2 dialogueManager2;
+    public DialogueNode startingNode;
+
+    //public DialogueManager dialogueManager; // Reference to your Dialogue Manager
+    //public DialogueData introDialogue; // Reference to the introductory dialogue
     public Image fadePanel; // Assign the fade image from the Inspector
     public float fadeDuration = 3f; // Duration of the fade effect
     public Image crosshair;
@@ -14,6 +17,7 @@ public class CampfireSceneManager : MonoBehaviour
 
     private void Start()
     {
+        dialogueManager2 = FindObjectOfType<DialogueManager2>();
         crosshair.enabled = false;
         player.GetComponent<FirstPersonController>().enabled = false;
         StartCoroutine(FadeIn());
@@ -45,17 +49,16 @@ public class CampfireSceneManager : MonoBehaviour
         // Ensure the image is fully transparent at the end
         fadePanel.color = Color.clear;
         crosshair.enabled = true;
-        player.GetComponent<FirstPersonController>().enabled = true;
+        //player.GetComponent<FirstPersonController>().enabled = true;
 
         // Call the method to show narration
+        //StartDialogue();
+
         StartDialogue();
     }
 
-
-
     public void StartDialogue()
     {
-        // Call the method to show narration
-        dialogueManager.StartDialogue(introDialogue);
+        dialogueManager2.StartDialogue(startingNode);
     }
 }
