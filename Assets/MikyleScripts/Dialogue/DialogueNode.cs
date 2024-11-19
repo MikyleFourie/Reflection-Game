@@ -10,6 +10,7 @@ public class DialogueNode : ScriptableObject
     public DialogueOption[] Options; // Player choices (optional)
     public DialogueNode NextNode; // Next node (if no choices)
     public DialogueEvent[] Events; // Events tied to this node
+    public bool RequiresInteraction = false;
 }
 
 [System.Serializable]

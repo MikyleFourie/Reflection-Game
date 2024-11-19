@@ -1,28 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    //public void TriggerEvent(DialogueEvent dialogueEvent)
-    //{
-    //    switch (dialogueEvent.Type)
-    //    {
-    //        case DialogueEvent.EventType.PauseDialogue:
-    //            Debug.Log("Pausing dialogue.");
-    //            break;
 
-    //        case DialogueEvent.EventType.TriggerInteraction:
-    //            Debug.Log($"Triggering interaction with {dialogueEvent.Target}: {dialogueEvent.Action}");
-    //        // Example: Highlight the wrench
-    //        //GameObject targetObject = GameObject.Find(dialogueEvent.Target);
-    //        //if (targetObject)
-    //        //{
-    //        //    targetObject.GetComponent<Interactable>().Highlight();
-    //        //}
-    //        break;
+    public void ProcessEvents(DialogueEvent[] events, System.Action onAllEventsComplete)
+    {
+        StartCoroutine(ProcessEventQueue(events, onAllEventsComplete));
+    }
 
-    //        case DialogueEvent.EventType.PlayAnimation:
-    //            Debug.Log($"Playing animation: {dialogueEvent.Action}");
-    //            break;
-    //    }
-    //}
+    private IEnumerator ProcessEventQueue(DialogueEvent[] events, System.Action onAllEventsComplete)
+    {
+        foreach (DialogueEvent dialogueEvent in events)
+        {
+            bool eventCompleted = false;
+
+            dialogueEvent.Execute(dialogueEvent.Duration, () => eventCompleted = true);
+
+            // Wait until the current event finishes
+            yield return new WaitUntil(() => eventCompleted);
+        }
+
+        // Notify when all events are complete
+        onAllEventsComplete?.Invoke();
+    }
 }

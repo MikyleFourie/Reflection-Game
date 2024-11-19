@@ -60,19 +60,20 @@ public class Souvenir : MonoBehaviour, IInteractable
         //yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
 
         //Fade Out
-        if (sceneFader != null)
-        {
-            sceneFader.StartFadeOut();
-        }
-        else
-        {
-            Debug.LogError("SceneFader not found in the scene");
-        }
+        //if (sceneFader != null)
+        //{
+        //    sceneFader.StartFadeOut();
+        //}
+        //else
+        //{
+        //    Debug.LogError("SceneFader not found in the scene");
+        //}
 
-        yield return new WaitForSeconds(3);
+        //yield return new WaitForSeconds(3);
+        yield break;
 
-        // Load the next level after the dialogue is finished
-        LoadNextLevel();
+        //// Load the next level after the dialogue is finished
+        //LoadNextLevel();
     }
 
     private void LoadNextLevel()

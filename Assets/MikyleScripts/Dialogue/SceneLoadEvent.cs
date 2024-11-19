@@ -7,9 +7,11 @@ public class SceneLoadEvent : DialogueEvent
 {
     public string nextLevel;
 
-    public override void Execute()
+    public override void Execute(float Duration, System.Action onComplete)
     {
         // Load the next scene after the fade out
         SceneManager.LoadScene(nextLevel);
+
+        onComplete?.Invoke();
     }
 }

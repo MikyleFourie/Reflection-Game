@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -125,23 +126,52 @@ public class DialogueManager2 : MonoBehaviour
     private void ProcessEvents()
     {
         Debug.Log("Processing Events...");
-        if (currentNode.Events != null)
+        if (currentNode.Events != null && currentNode.Events.Count() > 0)
         {
-            foreach (DialogueEvent dialogueEvent in currentNode.Events)
-            {
-                dialogueEvent.Execute();
-            }
+            eventManager.ProcessEvents(currentNode.Events, OnEventsComplete);
+        }
+        else
+        {
+            OnEventsComplete();
+        }
+
+        //if (currentNode.NextNode != null)
+        //{
+        //    Debug.Log("Next node WAS NOT null");
+        //    currentNode = currentNode.NextNode;
+        //    DisplayDialogue();
+        //}
+        //else
+        //{
+        //    EndDialogue();
+        //}
+    }
+
+    private void OnEventsComplete()
+    {
+        if (currentNode.RequiresInteraction)
+        {
+            Debug.Log("Waiting for player interaction...");
+            return; // Wait until external trigger moves to the next node
         }
 
         if (currentNode.NextNode != null)
         {
-            Debug.Log("Next node WAS NOT null");
             currentNode = currentNode.NextNode;
             DisplayDialogue();
         }
         else
         {
             EndDialogue();
+        }
+    }
+
+    public void OnPlayerInteraction()
+    {
+        if (currentNode != null && currentNode.RequiresInteraction)
+        {
+            currentNode = currentNode.NextNode;
+            DisplayDialogue();
         }
     }
 

@@ -29,7 +29,7 @@ public class CampfireSceneManager : MonoBehaviour
         fadePanel.color = Color.black;
 
         // Store the camera's initial rotation
-        Quaternion initialRotation = Camera.main.transform.rotation; // Assuming the main camera is being used
+        Quaternion initialRotation = Camera.main.transform.localRotation; // Assuming the main camera is being used
         Quaternion targetRotation = Quaternion.Euler(0, 0, 0); // Target rotation
 
         // Gradually reduce the alpha value of the fade image to 0
@@ -41,7 +41,7 @@ public class CampfireSceneManager : MonoBehaviour
             fadePanel.color = Color.Lerp(Color.black, Color.clear, normalizedTime);
 
             // Linear interpolation for camera rotation
-            Camera.main.transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, normalizedTime);
+            Camera.main.transform.localRotation = Quaternion.Slerp(initialRotation, targetRotation, normalizedTime);
 
             yield return null; // Wait for the next frame
         }

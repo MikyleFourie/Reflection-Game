@@ -44,15 +44,15 @@ public class SceneFader : MonoBehaviour
         // Allow player movement here or signal that the game can proceed
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator FadeOut(float duration, System.Action onComplete)
     {
         // Start with the overlay fully transparent
         fadePanel.color = Color.clear;
 
         // Gradually increase the alpha value of the fade image to 1 (black)
-        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        for (float t = 0; t < duration; t += Time.deltaTime)
         {
-            float normalizedTime = t / fadeDuration;
+            float normalizedTime = t / duration;
 
             // Exponential easing: accelerate the darkening effect
             float easedTime = Mathf.Pow(normalizedTime, 2); // This creates an exponential effect
@@ -67,6 +67,7 @@ public class SceneFader : MonoBehaviour
         // Optionally, disable player movement or signal the start of a new scene
         crosshair.enabled = false; // Hide crosshair if needed
         player.GetComponent<FirstPersonController>().enabled = false; // Disable movement or other actions
+        onComplete?.Invoke();
     }
 
     public void StartFadeIn()
@@ -74,8 +75,8 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    public void StartFadeOut()
+    public void StartFadeOut(float duration, System.Action onComplete)
     {
-        StartCoroutine(FadeOut());
+        StartCoroutine(FadeOut(duration, onComplete));
     }
 }
