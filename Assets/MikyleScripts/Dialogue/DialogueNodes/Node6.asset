@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 6
   Speaker: 'Benji:'
   DialogueText: At least I got some cool souvenirs for the RV
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 62d6c8574345ec545ba7e9f31d231b35, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

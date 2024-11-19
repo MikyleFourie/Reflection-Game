@@ -15,7 +15,8 @@ MonoBehaviour:
   NodeID: 2
   Speaker: 'Benji:'
   DialogueText: Guess I'll go sit by the fire and wait for the lights to start...
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: dd7a7dded03b97c4b997c77957b720cc, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []
+  RequiresInteraction: 0

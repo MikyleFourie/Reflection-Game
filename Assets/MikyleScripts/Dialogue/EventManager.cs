@@ -16,6 +16,7 @@ public class EventManager : MonoBehaviour
         {
             bool eventCompleted = false;
 
+            yield return new WaitForSeconds(dialogueEvent.Duration);
             dialogueEvent.Execute(dialogueEvent.Duration, () => eventCompleted = true);
 
             // Wait until the current event finishes

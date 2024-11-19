@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class DialogueManager2 : MonoBehaviour
@@ -12,7 +13,7 @@ public class DialogueManager2 : MonoBehaviour
     public TextMeshProUGUI DialogueText; // UI for dialogue
     public TextMeshProUGUI SpeakerText; // UI for speaker name
     public GameObject ChoicePanel; // Panel for player choices
-    public Button ChoiceButtonPrefab; // Button template for choices
+    public Button[] choiceButtons; // Button array
     public AudioSource AudioSource; // For voice clips
 
     private DialogueNode currentNode; // Active dialogue node
@@ -25,11 +26,17 @@ public class DialogueManager2 : MonoBehaviour
     {
         eventManager = FindObjectOfType<EventManager>();
         player = GameObject.FindWithTag("Player");
+        AudioSource = player.GetComponent<AudioSource>();
+
+        choiceButtons = ChoicePanel.GetComponentsInChildren<Button>();
+        ChoicePanel.SetActive(false);
+
         dialoguePanel.SetActive(false);  // Hide the dialogue panel initially
     }
 
     public void StartDialogue(DialogueNode startNode)
     {
+        ChoicePanel.SetActive(false);
         dialoguePanel.SetActive(true);  // Reveal the dialogue panel
         currentNode = startNode;
 
@@ -46,7 +53,7 @@ public class DialogueManager2 : MonoBehaviour
             return;
         }
 
-        //Debug.Log("Node: " + currentNode.NodeID);
+        Debug.Log("Node: " + currentNode.NodeID);
 
         //Update speaker and start typewriter effect
         SpeakerText.text = currentNode.Speaker;
@@ -61,16 +68,14 @@ public class DialogueManager2 : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Options was 0");
             ChoicePanel.SetActive(false);
-            //Invoke(nameof(ProcessEvents), AudioSource.clip?.length ?? 0f);
-            waitingForInput = false;
+            //waitingForInput = false;
         }
     }
 
     private void Update()
     {
-        if (waitingForInput && Input.GetKeyDown(KeyCode.Space) && !isTyping)
+        if (waitingForInput && Input.GetKeyDown(KeyCode.Space) && !isTyping && currentNode.Options.Length <= 0)
         {
             waitingForInput = false;
             ProcessEvents();
@@ -87,8 +92,11 @@ public class DialogueManager2 : MonoBehaviour
             DialogueText.text += c;
             yield return new WaitForSeconds(0.04f); // Typewriter speed
         }
+        choiceButtons[0].Select();
         isTyping = false;
         waitingForInput = true;
+
+
     }
 
     private void PlayAudio(AudioClip clip)
@@ -103,21 +111,32 @@ public class DialogueManager2 : MonoBehaviour
     private void DisplayOptions()
     {
         ChoicePanel.SetActive(true);
-        foreach (Transform child in ChoicePanel.transform)
+        for (int i = 0; i < currentNode.Options.Length; i++)
         {
-            Destroy(child.gameObject);
+            int optionIndex = i; // Capture the index by value
+
+            // Update the button's text
+            choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentNode.Options[optionIndex].Text;
+
+            // Clear previous listeners to avoid stacking
+            choiceButtons[i].onClick.RemoveAllListeners();
+
+            // Add the new listener
+            choiceButtons[i].onClick.AddListener(() => OnChoiceSelected(currentNode.Options[optionIndex].NextNode));
         }
 
-        foreach (DialogueOption option in currentNode.Options)
-        {
-            Button button = Instantiate(ChoiceButtonPrefab, ChoicePanel.transform);
-            button.GetComponentInChildren<TextMeshProUGUI>().text = option.Text;
-            button.onClick.AddListener(() => OnChoiceSelected(option.NextNode));
-        }
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(choiceButtons[0].gameObject);
+        //choiceButtons[0].Select(); // Set the first button as the selected one
+
+
     }
 
     private void OnChoiceSelected(DialogueNode nextNode)
     {
+        waitingForInput = true;
+        //choiceButtons[0].Select(); // Set the first button as the selected one
         ChoicePanel.SetActive(false);
         currentNode = nextNode;
         DisplayDialogue();
@@ -179,6 +198,7 @@ public class DialogueManager2 : MonoBehaviour
     {
         player.GetComponent<FirstPersonController>().enabled = true;
         // Debug.Log("Dialogue ended.");
+        ChoicePanel.SetActive(false);
         dialoguePanel.SetActive(false); // Hide the dialogue panel
         DialogueText.text = "";         // Clear the dialogue text
         SpeakerText.text = "";          // Clear the speaker name

@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 6
   Speaker: 'Benji:'
   DialogueText: Yeah, this is the Key I got from Alex at his Garage
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 6bfba8d25f1eb2a4b8e24a6f47681455, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events:

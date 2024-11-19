@@ -16,7 +16,8 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: I met incredible people along this journey, I wonder what they're
     up to
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 289cef05e67ef3042b57ba6ef1fab4dd, type: 3}
   Options: []
   NextNode: {fileID: 11400000, guid: c76caf9670628ef4085471198d399913, type: 2}
   Events: []
+  RequiresInteraction: 0

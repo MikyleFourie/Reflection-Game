@@ -17,7 +17,8 @@ MonoBehaviour:
   DialogueText: 'Warm...
 
     It feels like something''s missing though...'
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 73c567c59192146428696128989b8266, type: 3}
   Options: []
   NextNode: {fileID: 11400000, guid: 34b25a70af2cca94489d614da94e79e8, type: 2}
   Events: []
+  RequiresInteraction: 0

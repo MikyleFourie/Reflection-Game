@@ -13,6 +13,7 @@ public class SceneFader : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         crosshair.enabled = false;
         player.GetComponent<FirstPersonController>().enabled = false;
         if (fadeInOnStart)

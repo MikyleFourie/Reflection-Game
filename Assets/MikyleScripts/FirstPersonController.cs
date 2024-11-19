@@ -61,6 +61,13 @@ public class FirstPersonController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && currentInteractable != null)
         {
+            //turn off outline
+            foreach (var item in interactableObjects)
+            {
+                Outline outlineScript = item.GetComponent<Outline>();
+                outlineScript.enabled = false;
+            }
+
             currentInteractable.Interact(); // Call the interact method on the object
             currentInteractable = null;
         }
@@ -226,7 +233,7 @@ public class FirstPersonController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
+        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable") || other.CompareTag("NPC"))
         {
             Debug.Log("Entered Trigger of : " + other.name);
             interactableObjects.Add(other.gameObject);
@@ -238,7 +245,7 @@ public class FirstPersonController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable"))
+        if (other.CompareTag("Souvenir") || other.CompareTag("Interactable") || other.CompareTag("NPC"))
         {
             interactableObjects.Remove(other.gameObject);
             Outline outlineScript = other.GetComponent<Outline>();
