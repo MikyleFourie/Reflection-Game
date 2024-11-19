@@ -41,12 +41,12 @@ public class DialogueManager2 : MonoBehaviour
         player.GetComponent<FirstPersonController>().enabled = false;
         if (currentNode == null)
         {
-            Debug.Log("current node was null");
+            //Debug.Log("current node was null");
             EndDialogue();
             return;
         }
 
-        Debug.Log("Node: " + currentNode.NodeID);
+        //Debug.Log("Node: " + currentNode.NodeID);
 
         //Update speaker and start typewriter effect
         SpeakerText.text = currentNode.Speaker;
@@ -61,7 +61,7 @@ public class DialogueManager2 : MonoBehaviour
         }
         else
         {
-            Debug.Log("Options was 0");
+            //Debug.Log("Options was 0");
             ChoicePanel.SetActive(false);
             //Invoke(nameof(ProcessEvents), AudioSource.clip?.length ?? 0f);
             waitingForInput = false;
@@ -79,7 +79,7 @@ public class DialogueManager2 : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
-        Debug.Log("Typing...");
+        // Debug.Log("Typing...");
         isTyping = true;
         DialogueText.text = "";
         foreach (char c in text)
@@ -125,7 +125,7 @@ public class DialogueManager2 : MonoBehaviour
 
     private void ProcessEvents()
     {
-        Debug.Log("Processing Events...");
+        // Debug.Log("Processing Events...");
         if (currentNode.Events != null && currentNode.Events.Count() > 0)
         {
             eventManager.ProcessEvents(currentNode.Events, OnEventsComplete);
@@ -151,7 +151,7 @@ public class DialogueManager2 : MonoBehaviour
     {
         if (currentNode.RequiresInteraction)
         {
-            Debug.Log("Waiting for player interaction...");
+            //  Debug.Log("Waiting for player interaction...");
             return; // Wait until external trigger moves to the next node
         }
 
@@ -178,7 +178,7 @@ public class DialogueManager2 : MonoBehaviour
     private void EndDialogue()
     {
         player.GetComponent<FirstPersonController>().enabled = true;
-        Debug.Log("Dialogue ended.");
+        // Debug.Log("Dialogue ended.");
         dialoguePanel.SetActive(false); // Hide the dialogue panel
         DialogueText.text = "";         // Clear the dialogue text
         SpeakerText.text = "";          // Clear the speaker name

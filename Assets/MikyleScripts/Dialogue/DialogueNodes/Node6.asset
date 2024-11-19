@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeID: 6
   Speaker: 'Benji:'
-  DialogueText: At least I got some cool souvenirs for the Rv
+  DialogueText: At least I got some cool souvenirs for the RV
   AudioClip: {fileID: 0}
   Options: []
   NextNode: {fileID: 0}
   Events: []
+  RequiresInteraction: 0

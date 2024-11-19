@@ -18,7 +18,6 @@ public class Souvenir : MonoBehaviour, IInteractable
     void Start()
     {
         // Automatically find and assign the DialogueManager in the scene
-        //dialogueManager = FindObjectOfType<DialogueManager>();
         dialogueManager2 = FindObjectOfType<DialogueManager2>();
 
         if (dialogueManager2 == null)
@@ -39,41 +38,22 @@ public class Souvenir : MonoBehaviour, IInteractable
         // Start the dialogue and wait for it to finish if it's loadable
         if (isLoadable && !string.IsNullOrEmpty(nextLevel))
         {
-            //StartCoroutine(HandleInteraction());
             dialogueManager2.StartDialogue(souvenirNode);
         }
         else
         {
             // If not loadable, just show the dialogue
-            //dialogueManager.StartDialogue(souvenirDialogue);
             dialogueManager2.StartDialogue(souvenirNode);
         }
     }
 
     private IEnumerator HandleInteraction()
     {
-        // Start the dialogue
-        //dialogueManager.StartDialogue(souvenirDialogue);
+
         dialogueManager2.StartDialogue(souvenirNode);
 
-        // Wait for the dialogue to complete
-        //yield return new WaitUntil(() => !dialogueManager.IsDialogueActive); // Use a property in DialogueManager to check if dialogue is still active
-
-        //Fade Out
-        //if (sceneFader != null)
-        //{
-        //    sceneFader.StartFadeOut();
-        //}
-        //else
-        //{
-        //    Debug.LogError("SceneFader not found in the scene");
-        //}
-
-        //yield return new WaitForSeconds(3);
         yield break;
 
-        //// Load the next level after the dialogue is finished
-        //LoadNextLevel();
     }
 
     private void LoadNextLevel()

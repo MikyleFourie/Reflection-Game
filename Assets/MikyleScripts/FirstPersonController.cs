@@ -70,6 +70,7 @@ public class FirstPersonController : MonoBehaviour
         // Allow standing up when sitting
         if (Input.GetKeyDown(KeyCode.Space) && !canMove)
         {
+            Debug.Log("Space was pressed");
             // Call the stand up method from the Log script (if needed)
             StandUp();
         }
@@ -103,6 +104,7 @@ public class FirstPersonController : MonoBehaviour
 
             // Move the character
             controller.Move(move * Time.deltaTime);
+            HeadBob();
         }
         else
         {
@@ -113,7 +115,7 @@ public class FirstPersonController : MonoBehaviour
     void CheckFOVInteractivity()
     {
         currentInteractable = null;
-        Debug.Log("Checking list");
+        //Debug.Log("Checking list");
         foreach (var interactableObj in interactableObjects)
         {
             Outline outlineScript = interactableObj.GetComponent<Outline>();
@@ -141,7 +143,7 @@ public class FirstPersonController : MonoBehaviour
             // At the end of the loop, if currentInteractableObject is null, there is no interactable in view.
             if (currentInteractable == null)
             {
-                Debug.Log("No interactable object in view");
+                //Debug.Log("No interactable object in view");
             }
             else
             {
@@ -162,6 +164,9 @@ public class FirstPersonController : MonoBehaviour
 
     private void StandUp()
     {
+        this.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        Debug.Log("Stand Up Function in FPCon activtated");
+
         canMove = true; // Enable movement
 
         if (currentLog != null)

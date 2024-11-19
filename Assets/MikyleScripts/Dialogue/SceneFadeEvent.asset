@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422ddde83904c3945bd21f25ce2a50ab, type: 3}
   m_Name: SceneFadeEvent
   m_EditorClassIdentifier: 
+  Duration: 3

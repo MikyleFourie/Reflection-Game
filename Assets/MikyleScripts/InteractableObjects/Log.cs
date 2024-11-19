@@ -52,6 +52,7 @@ public class Log : MonoBehaviour, IInteractable
 
     private void SitDown()
     {
+        Debug.Log("SitDown in Log ran");
 
         // Move the player to the marker's position
         player.transform.position = marker.transform.position; // Move to marker position
@@ -74,6 +75,8 @@ public class Log : MonoBehaviour, IInteractable
 
     private void StandUp()
     {
+        Debug.Log("StandUp in Log ran");
+
         firstPersonController.SetCanMove(true); //Disable Movement
         isSitting = false; // Update sitting state
         Debug.Log("Player is standing up from the log.");
@@ -81,6 +84,8 @@ public class Log : MonoBehaviour, IInteractable
 
     public void PlayerStoodUp()
     {
+        Debug.Log("Player Stood Up Ran");
+
         isSitting = false; // Update sitting state when notified by the FirstPersonController
         Debug.Log("Log updated: player is no longer sitting.");
     }
