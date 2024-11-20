@@ -266,34 +266,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveButton
       objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 420321794}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: saveSettings
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenuManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7028882245318859840, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8922663876729111652, guid: 261ea05468d723f4488ca96c39b24531, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14436,9 +14408,6 @@ MonoBehaviour:
   continueButton: {fileID: 461837490}
   Title: {fileID: 1581729934}
   defaultText: Roadtrip
-  mouseSenseSlider: {fileID: 826094807}
-  walkSpeedSlider: {fileID: 1839669900}
-  dialogueSpeedSlider: {fileID: 2111464953}
 --- !u!1001 &428469821
 PrefabInstance:
   m_ObjectHideFlags: 0

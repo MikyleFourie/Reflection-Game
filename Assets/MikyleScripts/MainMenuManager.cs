@@ -18,21 +18,13 @@ public class MainMenuManager : MonoBehaviour
     public GameObject continueButton;
     public TextMeshProUGUI Title;
     public string defaultText = "Roadtrip";
-    public Slider mouseSenseSlider;
-    public Slider walkSpeedSlider;
-    public Slider dialogueSpeedSlider;
     GameObject firstActiveChild;
 
     GameObject player;
-    FirstPersonController firstPersonController;
-    DialogueManager2 dialogueManager;
     //bool isStart = true;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        firstPersonController = player.GetComponent<FirstPersonController>();
-        dialogueManager = FindObjectOfType<DialogueManager2>();
-
         backButton.SetActive(false);
         exitButton.SetActive(true);
         continueButton.SetActive(false);
@@ -71,10 +63,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void saveSettings()
     {
-        firstPersonController.speed = walkSpeedSlider.value;
-        firstPersonController.mouseSensitivity = mouseSenseSlider.value * 100;
-        dialogueManager.dialogueSpeed = dialogueSpeedSlider.value / 1000;
-        GoToMenu();
+
     }
 
     public void StartScene()
@@ -98,7 +87,7 @@ public class MainMenuManager : MonoBehaviour
         Title.text = defaultText;
         if (Title.text == "")
         {
-            //Debug.Log("Title was empty");
+            Debug.Log("Title was empty");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
