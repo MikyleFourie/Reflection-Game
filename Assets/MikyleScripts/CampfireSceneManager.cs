@@ -14,19 +14,27 @@ public class CampfireSceneManager : MonoBehaviour
     public float fadeDuration = 3f; // Duration of the fade effect
     public Image crosshair;
     public GameObject player;
+    private Color defaultColor;
 
     private void Start()
     {
+        defaultColor = new Color(0, 0, 0, 222f / 255f);
         dialogueManager2 = FindObjectOfType<DialogueManager2>();
         crosshair.enabled = false;
         player.GetComponent<FirstPersonController>().enabled = false;
+    }
+
+    public void BeginScene()
+    {
+        fadePanel.gameObject.SetActive(true);
         StartCoroutine(FadeIn());
     }
 
     private IEnumerator FadeIn()
     {
         // Start with the overlay fully visible
-        fadePanel.color = Color.black;
+        //fadePanel.color = Color.black;
+        fadePanel.color = defaultColor;
 
         // Store the camera's initial rotation
         Quaternion initialRotation = Camera.main.transform.localRotation; // Assuming the main camera is being used
@@ -38,7 +46,7 @@ public class CampfireSceneManager : MonoBehaviour
             float normalizedTime = t / fadeDuration;
 
             // Linear fade effect
-            fadePanel.color = Color.Lerp(Color.black, Color.clear, normalizedTime);
+            fadePanel.color = Color.Lerp(defaultColor, Color.clear, normalizedTime);
 
             // Linear interpolation for camera rotation
             Camera.main.transform.localRotation = Quaternion.Slerp(initialRotation, targetRotation, normalizedTime);

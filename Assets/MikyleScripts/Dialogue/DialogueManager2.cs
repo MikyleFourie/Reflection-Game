@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class DialogueManager2 : MonoBehaviour
 {
+    public float dialogueSpeed = 0.04f;
     public GameObject player;
     public GameObject dialoguePanel; // Panel for the dialogue
     public TextMeshProUGUI DialogueText; // UI for dialogue
@@ -90,7 +91,7 @@ public class DialogueManager2 : MonoBehaviour
         foreach (char c in text)
         {
             DialogueText.text += c;
-            yield return new WaitForSeconds(0.04f); // Typewriter speed
+            yield return new WaitForSeconds(dialogueSpeed); // Typewriter speed
         }
         choiceButtons[0].Select();
         isTyping = false;
