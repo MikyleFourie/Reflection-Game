@@ -25,6 +25,14 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        backButton.SetActive(false);
+        exitButton.SetActive(true);
+        continueButton.SetActive(false);
+        menuPanel.SetActive(true);
+        settingsPanel.SetActive(false);
+        controlsPanel.SetActive(false);
+        warningPanel.SetActive(false);
+
         //firstPersonController = player.GetComponent<FirstPersonController>();
         sceneManager = FindObjectOfType<CampfireSceneManager>();
         firstActiveChild = GetFirstActiveChild(menuPanel);
@@ -79,7 +87,7 @@ public class MainMenuManager : MonoBehaviour
         Title.text = defaultText;
         if (Title.text == "")
         {
-            //Debug.Log("Title was empty");
+            Debug.Log("Title was empty");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
@@ -138,13 +146,14 @@ public class MainMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && player.GetComponent<FirstPersonController>().enabled)
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            if (!menuPanel.activeSelf)
+            //Debug.Log("Input Detected");
+            if (!masterPanel.activeSelf && player.GetComponent<FirstPersonController>().enabled)
             {
                 GoToMenu();
             }
-            else
+            else if (masterPanel.activeSelf)
             {
                 showWarning();
             }
