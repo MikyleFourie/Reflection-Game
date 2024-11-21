@@ -53,14 +53,15 @@ public class Log : MonoBehaviour, IInteractable
     private void SitDown()
     {
         Debug.Log("SitDown in Log ran");
+        firstPersonController.SetCanMove(false); //Disable Movement
+        firstPersonController.SetSittingLog(this); // Set this log as the current one
+        isSitting = true; // Update sitting state
 
         // Move the player to the marker's position
         player.transform.position = marker.transform.position; // Move to marker position
         player.transform.rotation = Quaternion.LookRotation(logForward); // Align player to face log's local X-axis
 
-        firstPersonController.SetCanMove(false); //Disable Movement
-        firstPersonController.SetSittingLog(this); // Set this log as the current one
-        isSitting = true; // Update sitting state
+
 
         Debug.Log("sitting func should start");
 

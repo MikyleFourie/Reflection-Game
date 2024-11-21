@@ -26,7 +26,7 @@ public class FirstPersonController : MonoBehaviour
     private float defaultPosY = 0;
     private float timer = 0;
 
-    public float fovangle = 25f;
+    public float fovangle = 40f;
     public List<GameObject> interactableObjects;
     IInteractable currentInteractable = null; // Cache the current interactable object
 
@@ -119,43 +119,88 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    //void CheckFOVInteractivity()
+    //{
+    //    currentInteractable = null;
+    //    //Debug.Log("Checking list");
+    //    foreach (var interactableObj in interactableObjects)
+    //    {
+    //        Outline outlineScript = interactableObj.GetComponent<Outline>();
+
+    //        Vector3 directionToObject = (interactableObj.transform.position - playerCamera.transform.position).normalized;
+    //        Vector3 forwardDirection = playerCamera.transform.forward;
+
+    //        float angleToTarget = Vector3.Angle(forwardDirection, directionToObject);
+    //        //Debug.Log("Angle to target: " + angleToTarget);
+    //        if (angleToTarget <= fovangle / 2)
+    //        {
+    //            //Object is within vision cone
+    //            //Debug.Log(interactableObj.name + " is in range");
+    //            currentInteractable = interactableObj.transform.GetComponent<IInteractable>();
+    //            outlineScript.OutlineColor = Color.cyan;
+    //            outlineScript.OutlineWidth = 10;
+    //        }
+    //        else
+    //        {
+    //            //Debug.Log(interactableObj.name + " is NOT in range");
+    //            outlineScript.OutlineColor = Color.white;
+    //            outlineScript.OutlineWidth = 6;
+    //        }
+
+    //        // At the end of the loop, if currentInteractableObject is null, there is no interactable in view.
+    //        if (currentInteractable == null)
+    //        {
+    //            //Debug.Log("No interactable object in view");
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("Current interactable object: " + currentInteractable);
+    //        }
+    //    }
+    //}
+
     void CheckFOVInteractivity()
     {
         currentInteractable = null;
-        //Debug.Log("Checking list");
+
         foreach (var interactableObj in interactableObjects)
         {
             Outline outlineScript = interactableObj.GetComponent<Outline>();
 
-            Vector3 directionToObject = (interactableObj.transform.position - playerCamera.transform.position).normalized;
+            // Get the center of the object using its renderer
+            Renderer objRenderer = interactableObj.GetComponent<Renderer>();
+            Vector3 objectCenter = objRenderer ? objRenderer.bounds.center : interactableObj.transform.position;
+
+            // Direction to the center of the object
+            Vector3 directionToObject = (objectCenter - playerCamera.transform.position).normalized;
             Vector3 forwardDirection = playerCamera.transform.forward;
 
+            // Calculate angle
             float angleToTarget = Vector3.Angle(forwardDirection, directionToObject);
-            //Debug.Log("Angle to target: " + angleToTarget);
+
             if (angleToTarget <= fovangle / 2)
             {
-                //Object is within vision cone
-                //Debug.Log(interactableObj.name + " is in range");
+                // Object is within the vision cone
                 currentInteractable = interactableObj.transform.GetComponent<IInteractable>();
                 outlineScript.OutlineColor = Color.cyan;
                 outlineScript.OutlineWidth = 10;
             }
             else
             {
-                //Debug.Log(interactableObj.name + " is NOT in range");
+                // Object is outside the vision cone
                 outlineScript.OutlineColor = Color.white;
                 outlineScript.OutlineWidth = 6;
             }
+        }
 
-            // At the end of the loop, if currentInteractableObject is null, there is no interactable in view.
-            if (currentInteractable == null)
-            {
-                //Debug.Log("No interactable object in view");
-            }
-            else
-            {
-                Debug.Log("Current interactable object: " + currentInteractable);
-            }
+        // Debugging
+        if (currentInteractable == null)
+        {
+            Debug.Log("No interactable object in view");
+        }
+        else
+        {
+            Debug.Log("Current interactable object: " + currentInteractable);
         }
     }
 
