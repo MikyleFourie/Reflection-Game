@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20a6cae6690224408cd3966a47568c6, type: 3}
+  m_Name: BL 8
+  m_EditorClassIdentifier: 
+  NodeID: 8
+  Speaker: 'Becca:'
+  DialogueText: "Yeah, he was an old family friend I think? Bit of a mystery that
+    man. All I know is that he lives alone in a cabin, and no one\u2019s heard from
+    him in years.\n"
+  AudioClip: {fileID: 0}
+  Options: []
+  NextNode: {fileID: 0}
+  Events: []
+  RequiresInteraction: 0

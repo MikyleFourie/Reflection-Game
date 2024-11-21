@@ -8,6 +8,7 @@ TagManager:
   - Souvenir
   - Interactable
   - NPC
+  - Hint
   layers:
   - Default
   - TransparentFX

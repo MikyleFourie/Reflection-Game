@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
@@ -29,21 +30,45 @@ public class MainMenuManager : MonoBehaviour
     //bool isStart = true;
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        firstPersonController = player.GetComponent<FirstPersonController>();
-        dialogueManager = FindObjectOfType<DialogueManager2>();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            player = GameObject.FindWithTag("Player");
+            firstPersonController = player.GetComponent<FirstPersonController>();
+            dialogueManager = FindObjectOfType<DialogueManager2>();
 
-        backButton.SetActive(false);
-        exitButton.SetActive(true);
-        continueButton.SetActive(false);
-        menuPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        controlsPanel.SetActive(false);
-        warningPanel.SetActive(false);
+            backButton.SetActive(false);
+            exitButton.SetActive(true);
+            continueButton.SetActive(false);
+            menuPanel.SetActive(true);
+            settingsPanel.SetActive(false);
+            controlsPanel.SetActive(false);
+            warningPanel.SetActive(false);
 
-        //firstPersonController = player.GetComponent<FirstPersonController>();
-        sceneManager = FindObjectOfType<CampfireSceneManager>();
-        firstActiveChild = GetFirstActiveChild(menuPanel);
+            //firstPersonController = player.GetComponent<FirstPersonController>();
+            sceneManager = FindObjectOfType<CampfireSceneManager>();
+            firstActiveChild = GetFirstActiveChild(menuPanel);
+        }
+        else
+        {
+            player = GameObject.FindWithTag("Player");
+            firstPersonController = player.GetComponent<FirstPersonController>();
+            dialogueManager = FindObjectOfType<DialogueManager2>();
+
+            backButton.SetActive(false);
+            exitButton.SetActive(true);
+            continueButton.SetActive(false);
+            menuPanel.SetActive(true);
+            settingsPanel.SetActive(false);
+            controlsPanel.SetActive(false);
+            warningPanel.SetActive(false);
+            masterPanel.SetActive(false);
+
+            //firstPersonController = player.GetComponent<FirstPersonController>();
+            sceneManager = FindObjectOfType<CampfireSceneManager>();
+            firstActiveChild = GetFirstActiveChild(menuPanel);
+        }
+
+
 
     }
 
