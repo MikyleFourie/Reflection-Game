@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20a6cae6690224408cd3966a47568c6, type: 3}
+  m_Name: EL 4
+  m_EditorClassIdentifier: 
+  NodeID: 4
+  Speaker: 'Evelyn:'
+  DialogueText: "This town used to thrive. It started with a friend group that broke
+    apart after years. Charles and his sister Chrissy, Alex, and me. There was another
+    friend of ours\u2026 Lisa. After losing Chrissy she couldn\u2019t stand to stay
+    in town and fled, leaving behind her family and friends. This pendant belonged
+    to Chrissy but Charles gave it to Lisa after she passed. Where did you get it?"
+  AudioClip: {fileID: 0}
+  Options: []
+  NextNode: {fileID: 0}
+  Events: []
+  RequiresInteraction: 0

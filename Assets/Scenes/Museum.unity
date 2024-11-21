@@ -2707,7 +2707,7 @@ MonoBehaviour:
   exitButton: {fileID: 1380806965}
   continueButton: {fileID: 461837490}
   Title: {fileID: 1581729934}
-  defaultText: Roadtrip
+  defaultText: Trail
   mouseSenseSlider: {fileID: 826094807}
   walkSpeedSlider: {fileID: 1839669900}
   dialogueSpeedSlider: {fileID: 2111464953}
@@ -15355,7 +15355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Roadtrip
+  m_text: Trail
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da0bbd886dd105488d1c9e9c98ffba3, type: 2}
   m_sharedMaterial: {fileID: -4180061145678328554, guid: 7da0bbd886dd105488d1c9e9c98ffba3, type: 2}
