@@ -23,5 +23,5 @@ MonoBehaviour:
   NextNode: {fileID: 0}
   Events:
   - {fileID: 11400000, guid: 68bf692dc99425c45a202577df9e2931, type: 2}
-  - {fileID: 11400000, guid: 68bf692dc99425c45a202577df9e2931, type: 2}
+  - {fileID: 11400000, guid: cec2deb439b7ae24ea715bb450118e80, type: 2}
   RequiresInteraction: 0

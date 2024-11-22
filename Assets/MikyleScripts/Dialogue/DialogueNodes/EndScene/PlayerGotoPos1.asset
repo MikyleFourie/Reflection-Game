@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad9898a226069249aa7111e44e0feba, type: 3}
   m_Name: PlayerGotoPos1
   m_EditorClassIdentifier: 
-  Duration: 3
+  Duration: 1
   agent: Player
   target: Pos1
