@@ -23,5 +23,7 @@ MonoBehaviour:
   - Text: It's beautiful
     NextNode: {fileID: 11400000, guid: 69bcf9218dfcf0a41bb057610a690c11, type: 2}
   NextNode: {fileID: 0}
-  Events: []
+  Events:
+  - {fileID: 11400000, guid: 101051bc89571ed40a60e3c66c9082cd, type: 2}
+  - {fileID: 11400000, guid: 429e7294021280546af4d2638c3a6ead, type: 2}
   RequiresInteraction: 0

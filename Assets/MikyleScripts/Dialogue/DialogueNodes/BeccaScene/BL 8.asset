@@ -19,6 +19,6 @@ MonoBehaviour:
     him in years.\n"
   AudioClip: {fileID: 8300000, guid: 2963f9f6e0ba16e45aa5166c497f0a90, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 9fccac91ac569af49a44428cd474b538, type: 2}
   Events: []
   RequiresInteraction: 0

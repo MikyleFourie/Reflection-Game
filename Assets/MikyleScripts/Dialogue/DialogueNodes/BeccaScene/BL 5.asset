@@ -18,6 +18,6 @@ MonoBehaviour:
     like it\u2019s part of a memory\u2014faded, but still alive."
   AudioClip: {fileID: 8300000, guid: 0e49c274acf1bef489176a8544dc2892, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 4e2323ab4cabf7a47894902e4f1c6933, type: 2}
   Events: []
   RequiresInteraction: 0
