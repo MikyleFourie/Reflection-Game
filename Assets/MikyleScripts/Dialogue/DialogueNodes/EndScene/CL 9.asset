@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Charles:'
   DialogueText: "Hah. Don\u2019t go getting all sentimental on me. But... maybe you\u2019re
     right. Sometimes it takes a little push to get moving again."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: e62aacd2d82feaa46986e4c69880c00d, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

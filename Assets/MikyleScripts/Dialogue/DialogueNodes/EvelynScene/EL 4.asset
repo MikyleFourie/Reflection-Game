@@ -19,7 +19,7 @@ MonoBehaviour:
     friend of ours\u2026 Lisa. After losing Chrissy she couldn\u2019t stand to stay
     in town and fled, leaving behind her family and friends. This pendant belonged
     to Chrissy but Charles gave it to Lisa after she passed. Where did you get it?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 5118b920547c2a643b2599d5ea01d72a, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

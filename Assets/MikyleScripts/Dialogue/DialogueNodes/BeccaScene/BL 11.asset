@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Charles might know more. If you\u2019re looking for answers, maybe
     you should find him. He\u2019s always been solitary, but\u2026 lonely people
     are complicated, aren\u2019t they?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: a487b65c592891041a7b5c378f85f3d1, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

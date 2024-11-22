@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Oh, and one more thing. If you ever need someone to fix up that
     RV of yours, just holler. I don\u2019t charge much. Just a good story or two
     in exchange."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 8286c61fabf8a1945ba441a06b53d76a, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

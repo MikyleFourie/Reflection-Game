@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Alex:'
   DialogueText: "Well, well, looks like I\u2019ve got company. Ain\u2019t seen anyone
     stop by in a while. What brings you here?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: aff0e00dc5e9db2429c7c1e64864514a, type: 3}
   Options:
   - Text: Just passing through
     NextNode: {fileID: 11400000, guid: 65ffea5d26556eb4b81fe2cac34f3086, type: 2}

@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Well, look at us. A bunch of stubborn fools finally sitting together
     like a real family. I\u2019ll admit, I never thought I\u2019d see this day. Guess
     I owe you more than I can say."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 1d10bf824ad78aa44aecd0667d5d8509, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

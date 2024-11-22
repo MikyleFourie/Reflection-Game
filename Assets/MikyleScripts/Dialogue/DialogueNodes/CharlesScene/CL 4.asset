@@ -18,7 +18,7 @@ MonoBehaviour:
     I swore I left all that behind. Friendships...\r\nthey\u2019re like bridges.
     Strong until something decides to blow them up. Still... maybe it\u2019s time
     I stopped\r\nrunning from it."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: a07ae6742b2859f4d80da88f2fe1bfd9, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

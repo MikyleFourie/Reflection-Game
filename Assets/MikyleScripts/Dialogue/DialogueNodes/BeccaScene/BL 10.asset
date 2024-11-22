@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Becca:'
   DialogueText: "It is, but something tells me you need it more. Besides, I think
     it\u2019s part of a bigger story\u2014one I can\u2019t see yet"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: efdc272c5834a9a4492cded203108917, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

@@ -19,7 +19,7 @@ MonoBehaviour:
     other things. Tension. Conflict. Our friend group broke apart\r\nnot long after.
     If you want answers, head to the town. You\u2019ll see what I mean. Just don\u2019t
     expect to like what\r\nyou find."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 21d3183d156e2344dbd9fffa80be0c22, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

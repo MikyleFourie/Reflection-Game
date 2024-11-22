@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 5
   Speaker: 'Benji:'
   DialogueText: Thanks, I'll see if I can figure out what it's for.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: f9725593b3c964e499062a7dc880c563, type: 3}
   Options: []
   NextNode: {fileID: 11400000, guid: b27fa02c39f7e66489c4df89285a5aad, type: 2}
   Events: []

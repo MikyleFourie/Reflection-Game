@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: I found this polaroid. There was an otter in it. Maybe you would
     know them?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 002d4d42f7972e5458a62ab4a014d9bc, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

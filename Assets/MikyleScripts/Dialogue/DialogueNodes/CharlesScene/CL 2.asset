@@ -18,7 +18,7 @@ MonoBehaviour:
     people than they deserved. Well, if she trusts you enough to send you here, I
     suppose you can come in but make it quick. I\u2019m not in the mood for small
     talk."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 75f0a96ac0a760c4dac70c22ae22593f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

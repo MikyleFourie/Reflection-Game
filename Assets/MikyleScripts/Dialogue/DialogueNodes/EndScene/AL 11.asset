@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Funny how something so small could hold such a big story. I had
     no idea what it meant back then, but... I guess I do now. That key didn\u2019t
     just open doors\u2014it brought us all here. "
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 933a34a058adf4e4987d557edf0a102c, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

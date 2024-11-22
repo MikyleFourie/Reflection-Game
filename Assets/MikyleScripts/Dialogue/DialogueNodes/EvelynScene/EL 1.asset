@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Well, well\u2026 I wasn\u2019t expecting company. It\u2019s not
     every day someone stumbles into this old town. You\u2019re not a tourist, are
     you? What brings you here?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 8f4a3aec4ec125d4785b4a82742eba36, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

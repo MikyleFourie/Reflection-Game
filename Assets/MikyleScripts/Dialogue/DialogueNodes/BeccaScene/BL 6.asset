@@ -18,7 +18,7 @@ MonoBehaviour:
     to piece together the connections in this town, but I got stuck. There are too
     many names missing, and too many questions unanswered. However, I refuse to believe
     that no one knows each other after living all of these years so close together"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 6d93270f3781fe744b829276526bb538, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

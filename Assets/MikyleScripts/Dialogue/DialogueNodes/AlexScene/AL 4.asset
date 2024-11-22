@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Funny how they become like home after a while. That old RV of yours,
     my shop here\u2014it\u2019s all just machines, but they\u2019re more than that,
     ain\u2019t they? They carry you through places, keep you company."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 6cd36f3bef89bcf45814d7e9c655a60a, type: 3}
   Options: []
   NextNode: {fileID: 11400000, guid: 7f375f866724e474b87853abee37d2e8, type: 2}
   Events:

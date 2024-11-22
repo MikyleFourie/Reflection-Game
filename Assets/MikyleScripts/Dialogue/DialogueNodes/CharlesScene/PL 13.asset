@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 13
   Speaker: 'Benji:'
   DialogueText: Becca sent me. She said your families came a long way?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 07db1cbbddd57e3478e038480a82ca83, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

@@ -17,8 +17,8 @@ MonoBehaviour:
   DialogueText: 'Now, the question is: What will you do with it? Will you let the
     past stay buried, or will you tell Becca the hard truth that her mother has hid
     her past from her?'
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 3899950229e937842abcab35caca1107, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []
-  RequiresInteraction: 0
+  RequiresInteraction: 1

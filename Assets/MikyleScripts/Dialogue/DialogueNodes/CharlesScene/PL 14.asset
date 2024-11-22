@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 14
   Speaker: 'Benji:'
   DialogueText: I found this pendant. Becca said it was her mothers.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: d4684acf47848b641928057dede63391, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

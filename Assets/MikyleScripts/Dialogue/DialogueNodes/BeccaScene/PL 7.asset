@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 7
   Speaker: 'Benji:'
   DialogueText: It's beautiful. Is it from somewhere you know?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: cda9058e3b4525d4eb21ed0afd4a5682, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

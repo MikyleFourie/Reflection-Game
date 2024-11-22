@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Becca:'
   DialogueText: "Oh, you\u2019re drawn to that one? Most people barely notice it\u2014it\u2019s
     personal."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: b2a47c2220012514692973ada16805aa, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

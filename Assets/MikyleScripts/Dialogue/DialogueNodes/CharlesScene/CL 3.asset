@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Haven\u2019t seen this in years. Becca held onto iit, huh? Figures.
     She always had a soft spot for the old stories. So, what are you after? A history
     lesson? Or just a place to warm up before you head back out?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 013dc2cb134b62f49ad2fd15b36c3502, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

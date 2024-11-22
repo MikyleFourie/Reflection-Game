@@ -18,7 +18,7 @@ MonoBehaviour:
     it in my granddad\u2019s toolbox. He always said it belonged to some distant
     relative\u2014part of a family secret, or something. I never thought much of
     it. Just kept it around. But maybe it\u2019s meant for someone like you."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: e0de47c2fa66bf34388afef0e9ed8fb5, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

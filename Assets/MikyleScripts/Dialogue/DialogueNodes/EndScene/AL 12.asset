@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 12
   Speaker: 'Alex:'
   DialogueText: Well said, kid. Well said.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 0b2512fffe341104e932c4b474a22191, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

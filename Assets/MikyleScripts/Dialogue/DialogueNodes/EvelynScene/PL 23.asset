@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 22
   Speaker: 'Benji:'
   DialogueText: Becca deserves to know why she felt so connected to the town.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 7a20a394ac621984a89ef6f65c502067, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

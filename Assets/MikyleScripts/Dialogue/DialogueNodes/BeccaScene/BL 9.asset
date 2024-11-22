@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Becca:'
   DialogueText: "This belonged to my mother. She always said it was a good luck charm.
     I\u2019ve held onto it for years, but maybe it\u2019s meant to help you now."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: cf7bd602e1dcfc34286ab64722896121, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

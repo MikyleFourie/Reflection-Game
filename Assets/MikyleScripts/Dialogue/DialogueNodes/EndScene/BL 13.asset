@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Becca:'
   DialogueText: "If he does, he\u2019ll owe me a lot more than an apology. But seriously,
     thank you. You\u2019ve given me more inspiration than I\u2019ve ever known."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 4d6236cfe222bfb40b9f7cb4d9f537ee, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Really? That\u2019s\u2026 unusual. I\u2019ve never been there myself,
     but my mother used to tell stories about it. She said it was the heart of her
     family, a place where everything started."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: b1ce0f61959ac2e429d8db4ad23d5a5f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

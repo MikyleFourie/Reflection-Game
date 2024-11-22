@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "This... This feels like one of my paintings come to life. I never
     thought I\u2019d feel like I belonged anywhere. It\u2019s... better than anything
     I\u2019ve ever put on canvas."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 311bfaac9855d14418b36d97892dc65a, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

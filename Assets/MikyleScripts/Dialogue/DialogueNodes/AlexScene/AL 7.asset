@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 7
   Speaker: 'Alex:'
   DialogueText: Why don't you hold onto it
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: e61433abf57d2bd458de1ef695a74a02, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

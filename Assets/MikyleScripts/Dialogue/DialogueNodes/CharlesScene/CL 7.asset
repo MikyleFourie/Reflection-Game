@@ -18,7 +18,7 @@ MonoBehaviour:
     sister died. Some said it was sabotage. Others blamed me. I don\u2019t know the
     truth, but I know it was the last nail in the coffin for the families. We scattered
     after that."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 8b986cdbf1fa56e4c89a95aa2e1179c4, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

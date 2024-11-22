@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "All these years, I\u2019ve been trying to understand what happened
     here. And now, you show up with the missing pieces. Becca must have followed
     her mother\u2019s stories back to this town."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 90e18f1b806850746800ad12bc613e8e, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

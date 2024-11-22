@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Evelyn:'
   DialogueText: And yet, it needed someone to bring it to light. Sometimes, the truth
     stays buried until the right person comes along.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: a3ba2d6c55931004991361088c03fed0, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

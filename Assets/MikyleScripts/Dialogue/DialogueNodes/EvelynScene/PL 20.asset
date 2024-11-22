@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 20
   Speaker: 'Benji:'
   DialogueText: Becca, a local artist across town.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 29c1fbb50c902f24288ead97289cc8a0, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

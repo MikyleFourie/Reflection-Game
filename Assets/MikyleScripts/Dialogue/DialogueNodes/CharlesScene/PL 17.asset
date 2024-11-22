@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 17
   Speaker: 'Benji:'
   DialogueText: What accident?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: e87e0c3ba97381343ae29b0aedb6d1a8, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

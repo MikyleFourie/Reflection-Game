@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 5
   Speaker: 'Alex:'
   DialogueText: Speaking of stories... there's something I think you might find interesting.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: abdedb3c9432bd244926596e70895c89, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

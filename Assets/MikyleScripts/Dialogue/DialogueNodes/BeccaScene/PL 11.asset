@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: So, the only face you can see is a stranger? You don't recognise
     anyone?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 948d787d2956365408e9ff464b58360f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

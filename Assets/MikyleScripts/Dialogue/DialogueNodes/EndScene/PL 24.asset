@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: You were the first one who helped me. I think this all started with
     that key you gave me.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: a87822d9cd516e54699655f7c5e70b55, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

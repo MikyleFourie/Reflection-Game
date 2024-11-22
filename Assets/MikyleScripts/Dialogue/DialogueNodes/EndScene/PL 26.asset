@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: Maybe it wasn't just me. You didn't have to leave your cabin, but
     you did. That means something.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 7d9edaae4242b0f47a77b08acaa40ae8, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

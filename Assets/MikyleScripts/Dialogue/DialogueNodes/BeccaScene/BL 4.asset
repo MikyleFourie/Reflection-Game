@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Becca:'
   DialogueText: "You seem like someone who appreciates a good story. Can I ask for
     your help? I\u2019ve been stuck on this piece, and I need a fresh perspective"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: f53810c48355e1a4c9d227226750d5fd, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

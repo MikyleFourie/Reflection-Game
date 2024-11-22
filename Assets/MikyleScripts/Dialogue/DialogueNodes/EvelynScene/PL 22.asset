@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: So I helped Becca find her roots in a twon she felt so connected
     to?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 6dd4abe6013eda5499289781ecf9265b, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

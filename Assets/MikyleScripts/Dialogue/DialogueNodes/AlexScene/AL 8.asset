@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "No rush. Life on the road ain\u2019t about speed. You\u2019ll figure
     it out when you\u2019re ready. And if you need anything while you\u2019re here,
     feel free to poke around. I\u2019m always around."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 8edae45f8abe3014b83005356e760a98, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

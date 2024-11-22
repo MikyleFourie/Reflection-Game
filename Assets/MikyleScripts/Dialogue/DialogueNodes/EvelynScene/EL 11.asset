@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Perhaps you\u2019re right. But even if you choose to walk away,
     you\u2019ve already done something remarkable\u2014you\u2019ve remembered. And
     that\u2019s more than most ever do."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 0f977f31f08336c4bb18eac9b6271d0f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

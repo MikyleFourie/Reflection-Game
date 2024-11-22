@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Evelyn:'
   DialogueText: We lived our lives, thinking that that part of our were forever gone.
     We tried to forget. But now you Connected us again.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 954a01d0f58d6ee4cb09fd736c902db3, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 16
   Speaker: 'Benji:'
   DialogueText: What's this? A bridge?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: abdd1c565d36b9145afbf606ac17dc47, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

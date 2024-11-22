@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: Thank you. No, I've never seen it in person. My mom described it
     to me when I was little, like it was a magical place. I've always wondered if
     it really exists.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 9ad9161d02ffaac498e7793ebae7563b, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

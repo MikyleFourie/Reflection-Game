@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Evelyn:'
   DialogueText: "You\u2019ve not only uncovered a legacy but written a new chapter.
     This group owes you everything."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 7d2a0888593a23240b3137e5ef73a52d, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

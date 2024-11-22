@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "\u201CYour friend, you say? That\u2019s interesting. This town has
     more history than most care to remember. Let me guess\u2014you\u2019re looking
     for answers, aren\u2019t you?"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 039c4a9b1cbaf46478d7eefed555d621, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

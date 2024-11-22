@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 19
   Speaker: 'Benji:'
   DialogueText: I'm following a trail. This pendant and blueprint led me here.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: bbfe4bea6c248ad44b91182f5db6e1c1, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

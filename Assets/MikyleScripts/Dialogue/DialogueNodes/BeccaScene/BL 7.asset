@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 7
   Speaker: 'Becca:'
   DialogueText: Not at all. Maybe you'll notice something I missed.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: cbcd2b802097eb04b984ad0c5af8420f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

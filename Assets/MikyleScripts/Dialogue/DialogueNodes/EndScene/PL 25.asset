@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 25
   Speaker: 'Benji:'
   DialogueText: You say that now but wait until Alex gets his greasy hands on it.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 5bb08e3b95eb3aa439866549f6c8e47f, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

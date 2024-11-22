@@ -18,8 +18,8 @@ MonoBehaviour:
     But promises are tricky things. We had plans for the land on the other side\u2014big
     plans. Not everyone agreed with them, especially the people in town. It all went
     south after that, especially after\u2026 the accident. "
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 1ad48e979c05f8f449fbeb6b408f1cda, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []
-  RequiresInteraction: 0
+  RequiresInteraction: 1

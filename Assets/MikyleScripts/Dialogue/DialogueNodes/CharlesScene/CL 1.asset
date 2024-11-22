@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Charles:'
   DialogueText: "What do you want? I don\u2019t get visitors out here. Whoever sent
     you, tell them I\u2019m not interested."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 37d7c9e9171e0ad48b2d9f0daf952ee2, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

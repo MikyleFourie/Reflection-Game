@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 7
   Speaker: 'Benji:'
   DialogueText: Do you mind if I take a closer look?
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 5ec35c9a564cb584fbca92c0d1cb0292, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

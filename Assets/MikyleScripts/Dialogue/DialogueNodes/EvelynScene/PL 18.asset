@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 18
   Speaker: 'Benji:'
   DialogueText: I'm trying to uncover a friends past.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: a00c2a7a89a8b98449eda2437b2606a2, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

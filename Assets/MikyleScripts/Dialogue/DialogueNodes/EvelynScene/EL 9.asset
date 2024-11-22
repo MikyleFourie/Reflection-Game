@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Evelyn:'
   DialogueText: "This is it. The missing faces, the lost connections. You\u2019ve
     brought it all back together"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 285eead9cfdad6447883be028a2306c7, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

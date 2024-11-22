@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Hmph. I never thought I\u2019d see the day I\u2019d be sitting here,
     of all places. Guess even an old hermit like me can\u2019t hide forever. You\u2019ve
     done something special, kid."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 4abbaad7b40ad2c4ebb1c532326c25ef, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

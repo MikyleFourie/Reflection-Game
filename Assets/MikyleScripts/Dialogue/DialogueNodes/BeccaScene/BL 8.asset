@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: "Yeah, he was an old family friend I think? Bit of a mystery that
     man. All I know is that he lives alone in a cabin, and no one\u2019s heard from
     him in years.\n"
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 2963f9f6e0ba16e45aa5166c497f0a90, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

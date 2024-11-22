@@ -18,7 +18,7 @@ MonoBehaviour:
     from the bridge Charles built. You\u2019re getting yourself into a very gloomy
     past that this town had to face. You\u2019ve brought pieces of the puzzle I\u2019ve
     been trying to solve for years."
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 18699e1709dbb714bbfd18e5959df693, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

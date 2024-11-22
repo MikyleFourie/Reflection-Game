@@ -15,7 +15,7 @@ MonoBehaviour:
   NodeID: 5
   Speaker: 'Evelyn:'
   DialogueText: Lisa always told me it was her prized possession...
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: d48cc4b7f7260e64584a012ef8bee0a5, type: 3}
   Options: []
   NextNode: {fileID: 0}
   Events: []

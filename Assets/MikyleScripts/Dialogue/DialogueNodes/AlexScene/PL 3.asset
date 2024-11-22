@@ -16,7 +16,7 @@ MonoBehaviour:
   Speaker: 'Benji:'
   DialogueText: More stories than I care to remember. Been on the road for a long
     time.
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 155cc86ee3793d147a08b3a3440a2a09, type: 3}
   Options: []
   NextNode: {fileID: 11400000, guid: b27fa02c39f7e66489c4df89285a5aad, type: 2}
   Events: []
