@@ -18,8 +18,8 @@ public class DialogueManager2 : MonoBehaviour
     public AudioSource AudioSource; // For voice clips
 
     private DialogueNode currentNode; // Active dialogue node
-    private bool isTyping; // Prevents skipping during typewriter effect
-    private bool waitingForInput;
+    public bool isTyping; // Prevents skipping during typewriter effect
+    public bool waitingForInput;
     private EventManager eventManager;
 
 
@@ -62,21 +62,21 @@ public class DialogueManager2 : MonoBehaviour
         StartCoroutine(TypeText(currentNode.DialogueText));
         PlayAudio(currentNode.AudioClip);
 
-        //Handle Options
-        if (currentNode.Options.Length > 0)
-        {
-            DisplayOptions();
-        }
-        else
-        {
-            ChoicePanel.SetActive(false);
-            //waitingForInput = false;
-        }
+        ////Handle Options
+        //if (currentNode.Options.Length > 0)
+        //{
+        //    DisplayOptions();
+        //}
+        //else
+        //{
+        //    ChoicePanel.SetActive(false);
+        //    //waitingForInput = false;
+        //}
     }
 
     private void Update()
     {
-        if (waitingForInput && Input.GetKeyDown(KeyCode.Space) && !isTyping && currentNode.Options.Length <= 0)
+        if (waitingForInput && Input.GetKeyDown(KeyCode.Space) && !isTyping  /* && currentNode.Options.Length <= 0*/)
         {
             waitingForInput = false;
             ProcessEvents();
@@ -175,15 +175,27 @@ public class DialogueManager2 : MonoBehaviour
             return; // Wait until external trigger moves to the next node
         }
 
-        if (currentNode.NextNode != null)
+        //Handle Options
+        if (currentNode.Options.Length > 0)
         {
-            currentNode = currentNode.NextNode;
-            DisplayDialogue();
+            DisplayOptions();
         }
         else
         {
-            EndDialogue();
+            ChoicePanel.SetActive(false);
+            if (currentNode.NextNode != null)
+            {
+                currentNode = currentNode.NextNode;
+                DisplayDialogue();
+            }
+            else
+            {
+                EndDialogue();
+            }
+            //waitingForInput = false;
         }
+
+
     }
 
     public void OnPlayerInteraction()
@@ -197,6 +209,9 @@ public class DialogueManager2 : MonoBehaviour
 
     private void EndDialogue()
     {
+        if(AudioSource.isPlaying)
+            AudioSource.Stop();
+
         player.GetComponent<FirstPersonController>().enabled = true;
         // Debug.Log("Dialogue ended.");
         ChoicePanel.SetActive(false);

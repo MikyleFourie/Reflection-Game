@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Museum.unity
-    guid: 8b99f59437abfc84389bd1bc7a4c879d
+    path: Assets/Scenes/Campsite 1.unity
+    guid: 7eaf88358a0adbc4c9f24daa01e6909b
   - enabled: 1
     path: Assets/Scenes/LevelOne.unity
     guid: 4f6ea693da1dc094bb1e441d43f7123b

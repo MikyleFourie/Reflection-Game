@@ -22,5 +22,6 @@ MonoBehaviour:
   - Text: Thanks!
     NextNode: {fileID: 11400000, guid: 75beeeca91156894dbf5ef382230256b, type: 2}
   NextNode: {fileID: 0}
-  Events: []
+  Events:
+  - {fileID: 11400000, guid: 4a5fd1d63d4e0e14491dc01a99a742a9, type: 2}
   RequiresInteraction: 0

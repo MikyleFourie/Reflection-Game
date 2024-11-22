@@ -23,5 +23,6 @@ MonoBehaviour:
   - Text: RV's giving me trouble
     NextNode: {fileID: 11400000, guid: 1390414bb745c9045be5ed576416abb6, type: 2}
   NextNode: {fileID: 0}
-  Events: []
+  Events:
+  - {fileID: 11400000, guid: 17db49c834994744189b60d6ba936fb1, type: 2}
   RequiresInteraction: 0

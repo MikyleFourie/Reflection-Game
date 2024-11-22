@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - NPC
   - Hint
+  - EventManager
   layers:
   - Default
   - TransparentFX
