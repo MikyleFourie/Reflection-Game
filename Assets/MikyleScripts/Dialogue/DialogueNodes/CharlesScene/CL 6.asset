@@ -22,4 +22,4 @@ MonoBehaviour:
   Options: []
   NextNode: {fileID: 11400000, guid: 62dbd28f0c51b504ba21266ed51f0442, type: 2}
   Events: []
-  RequiresInteraction: 1
+  RequiresInteraction: 0
