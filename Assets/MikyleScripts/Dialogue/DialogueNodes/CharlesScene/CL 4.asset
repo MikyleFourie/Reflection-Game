@@ -21,5 +21,6 @@ MonoBehaviour:
   AudioClip: {fileID: 8300000, guid: a07ae6742b2859f4d80da88f2fe1bfd9, type: 3}
   Options: []
   NextNode: {fileID: 0}
-  Events: []
+  Events:
+  - {fileID: 11400000, guid: d8997b98951840a40a15d3b9cceba41e, type: 2}
   RequiresInteraction: 0
