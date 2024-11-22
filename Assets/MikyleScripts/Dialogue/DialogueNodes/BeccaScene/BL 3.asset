@@ -19,6 +19,6 @@ MonoBehaviour:
     it really exists.
   AudioClip: {fileID: 8300000, guid: 9ad9161d02ffaac498e7793ebae7563b, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: ad4145449b776244da6182288542f1e5, type: 2}
   Events: []
   RequiresInteraction: 0

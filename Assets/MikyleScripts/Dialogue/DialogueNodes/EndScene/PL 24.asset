@@ -18,6 +18,6 @@ MonoBehaviour:
     that key you gave me.
   AudioClip: {fileID: 8300000, guid: a87822d9cd516e54699655f7c5e70b55, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: ca86d27590714294cb1fefb08e83ea75, type: 2}
   Events: []
   RequiresInteraction: 0

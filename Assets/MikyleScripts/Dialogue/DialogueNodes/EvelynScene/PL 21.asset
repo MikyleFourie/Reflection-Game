@@ -17,6 +17,6 @@ MonoBehaviour:
   DialogueText: So did your old friend group have no idea that Becca is Lisa's daughter?
   AudioClip: {fileID: 8300000, guid: 9d2d025c0f1455a4b81e9fb308bc28f1, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 041b98deda004044385c2ada544a88d8, type: 2}
   Events: []
   RequiresInteraction: 0

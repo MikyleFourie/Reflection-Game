@@ -18,7 +18,11 @@ MonoBehaviour:
     here. And now, you show up with the missing pieces. Becca must have followed
     her mother\u2019s stories back to this town."
   AudioClip: {fileID: 8300000, guid: 90e18f1b806850746800ad12bc613e8e, type: 3}
-  Options: []
+  Options:
+  - Text: Y'all had no idea?
+    NextNode: {fileID: 11400000, guid: 69ed465aac784d241b60e374010622d7, type: 2}
+  - Text: I helped Becca?
+    NextNode: {fileID: 11400000, guid: 0dbccfb12d504f7448ad077f5921d083, type: 2}
   NextNode: {fileID: 0}
   Events: []
   RequiresInteraction: 0

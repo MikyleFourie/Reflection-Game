@@ -20,6 +20,6 @@ MonoBehaviour:
     south after that, especially after\u2026 the accident. "
   AudioClip: {fileID: 8300000, guid: 1ad48e979c05f8f449fbeb6b408f1cda, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 62dbd28f0c51b504ba21266ed51f0442, type: 2}
   Events: []
   RequiresInteraction: 1

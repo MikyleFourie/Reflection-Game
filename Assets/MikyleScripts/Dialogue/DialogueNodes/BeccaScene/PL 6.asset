@@ -17,6 +17,6 @@ MonoBehaviour:
   DialogueText: It feels familiar, somehow.
   AudioClip: {fileID: 8300000, guid: 04f9aa0a9bb5fe245b1c9a859b6a180f, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: f67c252af67228547992b44d3799882f, type: 2}
   Events: []
   RequiresInteraction: 0

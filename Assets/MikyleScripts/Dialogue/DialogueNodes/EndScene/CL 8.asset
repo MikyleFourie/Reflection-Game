@@ -19,6 +19,6 @@ MonoBehaviour:
     done something special, kid."
   AudioClip: {fileID: 8300000, guid: 4abbaad7b40ad2c4ebb1c532326c25ef, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: b0cda8d1394e7e2419e01896f66ce8e2, type: 2}
   Events: []
   RequiresInteraction: 0

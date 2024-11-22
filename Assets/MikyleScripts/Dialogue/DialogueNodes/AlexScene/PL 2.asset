@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeID: 2
   Speaker: 'Benji:'
-  DialogueText: I'm just passing through. I thought I'd take a break.
+  DialogueText: My RV's been giving me some trouble. Thought I'd see if you could
+    help.
   AudioClip: {fileID: 8300000, guid: 35024af9eb27dd34493e41faa4834e3b, type: 3}
   Options: []
-  NextNode: {fileID: 11400000, guid: 5a4b806362cb4e64ba3b5aac5a10ab65, type: 2}
+  NextNode: {fileID: 11400000, guid: 0dcd6528b146314478cc4ad0a27e0f4d, type: 2}
   Events:
   - {fileID: 11400000, guid: 5c57dac495367f443bb66575e3a09b6f, type: 2}
   RequiresInteraction: 0

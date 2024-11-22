@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeID: 8
   Speaker: 'Evelyn:'
-  DialogueText: "\u201CExactly. Every step you\u2019ve taken has brought you closer
-    to the truth. This town\u2026 it\u2019s not just a relic of the past. It\u2019s
+  DialogueText: "Exactly. Every step you\u2019ve taken has brought you closer to
+    the truth. This town\u2026 it\u2019s not just a relic of the past. It\u2019s
     her home, it\u2019s a shame her mother could not see that as well."
   AudioClip: {fileID: 8300000, guid: c97ead8eff1478944a5ada5853998bb5, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: d3e620a49f41fd442a2ca3399ad7cc33, type: 2}
   Events: []
   RequiresInteraction: 0

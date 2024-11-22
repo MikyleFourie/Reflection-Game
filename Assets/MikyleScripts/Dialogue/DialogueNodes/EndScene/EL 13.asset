@@ -18,6 +18,6 @@ MonoBehaviour:
     stays buried until the right person comes along.
   AudioClip: {fileID: 8300000, guid: a3ba2d6c55931004991361088c03fed0, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: cd29cdaa665011344a90200dd04f5417, type: 2}
   Events: []
   RequiresInteraction: 0

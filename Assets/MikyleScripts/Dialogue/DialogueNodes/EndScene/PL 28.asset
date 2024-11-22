@@ -18,6 +18,7 @@ MonoBehaviour:
     all of you.
   AudioClip: {fileID: 8300000, guid: 2d27bba6d289cc047acc196dd91b4e28, type: 3}
   Options: []
-  NextNode: {fileID: 0}
-  Events: []
+  NextNode: {fileID: 11400000, guid: 1f202f07d6073e045aa4b324da8e9729, type: 2}
+  Events:
+  - {fileID: 11400000, guid: 68bf692dc99425c45a202577df9e2931, type: 2}
   RequiresInteraction: 0

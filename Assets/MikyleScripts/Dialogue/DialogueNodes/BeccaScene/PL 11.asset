@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20a6cae6690224408cd3966a47568c6, type: 3}
   m_Name: PL 11
   m_EditorClassIdentifier: 
-  NodeID: 7
+  NodeID: 11
   Speaker: 'Benji:'
   DialogueText: So, the only face you can see is a stranger? You don't recognise
     anyone?
   AudioClip: {fileID: 8300000, guid: 948d787d2956365408e9ff464b58360f, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 006a455bdd1f985449cff766ee91cab4, type: 2}
   Events: []
   RequiresInteraction: 0

@@ -21,7 +21,7 @@ MonoBehaviour:
   - Text: Just passing through
     NextNode: {fileID: 11400000, guid: 65ffea5d26556eb4b81fe2cac34f3086, type: 2}
   - Text: RV's giving me trouble
-    NextNode: {fileID: 11400000, guid: 3234fcce07dc9f74f811e4d5d7b238f2, type: 2}
+    NextNode: {fileID: 11400000, guid: 1390414bb745c9045be5ed576416abb6, type: 2}
   NextNode: {fileID: 0}
   Events: []
   RequiresInteraction: 0

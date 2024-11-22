@@ -19,6 +19,6 @@ MonoBehaviour:
     just open doors\u2014it brought us all here. "
   AudioClip: {fileID: 8300000, guid: 933a34a058adf4e4987d557edf0a102c, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: c8a5f8d1b62cadb4b8c9ffa2b8c23103, type: 2}
   Events: []
   RequiresInteraction: 0

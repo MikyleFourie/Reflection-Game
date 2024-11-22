@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20a6cae6690224408cd3966a47568c6, type: 3}
   m_Name: PL 10
   m_EditorClassIdentifier: 
-  NodeID: 7
+  NodeID: 10
   Speaker: 'Benji:'
   DialogueText: Do you mind if I take a closer look?
   AudioClip: {fileID: 8300000, guid: 5ec35c9a564cb584fbca92c0d1cb0292, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 3ff43b4615b67df46809197c8f1cff43, type: 2}
   Events: []
   RequiresInteraction: 0

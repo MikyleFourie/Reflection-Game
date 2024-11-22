@@ -19,7 +19,11 @@ MonoBehaviour:
     many names missing, and too many questions unanswered. However, I refuse to believe
     that no one knows each other after living all of these years so close together"
   AudioClip: {fileID: 8300000, guid: 6d93270f3781fe744b829276526bb538, type: 3}
-  Options: []
+  Options:
+  - Text: Can I look closer?
+    NextNode: {fileID: 11400000, guid: 2f039dacd11c2504299e862f85502f4e, type: 2}
+  - Text: You don't recognise anyone?
+    NextNode: {fileID: 11400000, guid: aaa3bdbd1599b454bb34e724182bdd4d, type: 2}
   NextNode: {fileID: 0}
   Events: []
   RequiresInteraction: 0

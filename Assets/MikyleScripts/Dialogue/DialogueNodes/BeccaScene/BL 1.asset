@@ -17,7 +17,11 @@ MonoBehaviour:
   DialogueText: "Oh, you\u2019re drawn to that one? Most people barely notice it\u2014it\u2019s
     personal."
   AudioClip: {fileID: 8300000, guid: b2a47c2220012514692973ada16805aa, type: 3}
-  Options: []
+  Options:
+  - Text: It's familiar
+    NextNode: {fileID: 11400000, guid: 17b8c0e0749dc6542930b3276dac3367, type: 2}
+  - Text: It's beautiful
+    NextNode: {fileID: 11400000, guid: 69bcf9218dfcf0a41bb057610a690c11, type: 2}
   NextNode: {fileID: 0}
   Events: []
   RequiresInteraction: 0

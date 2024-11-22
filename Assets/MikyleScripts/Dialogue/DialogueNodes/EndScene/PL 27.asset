@@ -17,6 +17,6 @@ MonoBehaviour:
   DialogueText: All I did was follow the clues. The real story was already there.
   AudioClip: {fileID: 8300000, guid: 59fd4995e32220a45a8c2837f2b5510c, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 1e1fc5cfcfbed2b49a8aae5c63c6b5d7, type: 2}
   Events: []
   RequiresInteraction: 0

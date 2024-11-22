@@ -21,6 +21,6 @@ MonoBehaviour:
     to Chrissy but Charles gave it to Lisa after she passed. Where did you get it?"
   AudioClip: {fileID: 8300000, guid: 5118b920547c2a643b2599d5ea01d72a, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: d7843031c7f6ed44c8b52e1268df09ea, type: 2}
   Events: []
   RequiresInteraction: 0

@@ -17,6 +17,6 @@ MonoBehaviour:
   DialogueText: Lisa always told me it was her prized possession...
   AudioClip: {fileID: 8300000, guid: d48cc4b7f7260e64584a012ef8bee0a5, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 68a7c87c39d0ebf489980425eb8d6cdb, type: 2}
   Events: []
   RequiresInteraction: 0

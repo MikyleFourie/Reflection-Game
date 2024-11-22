@@ -17,6 +17,6 @@ MonoBehaviour:
   DialogueText: What's this? A bridge?
   AudioClip: {fileID: 8300000, guid: abdd1c565d36b9145afbf606ac17dc47, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: fd49b4c0d7b06594aaf3c948f6330c41, type: 2}
   Events: []
   RequiresInteraction: 0

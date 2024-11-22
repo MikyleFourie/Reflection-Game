@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeID: 5
   Speaker: 'Becca:'
-  DialogueText: "Help me mix the right shade for the sky. I want it to feel like
-    it\u2019s part of a memory\u2014faded, but still alive."
+  DialogueText: "Can you bring me that blue paint over there. I want the sky to feel
+    like it\u2019s part of a memory\u2014faded, but still alive."
   AudioClip: {fileID: 8300000, guid: 0e49c274acf1bef489176a8544dc2892, type: 3}
   Options: []
   NextNode: {fileID: 0}

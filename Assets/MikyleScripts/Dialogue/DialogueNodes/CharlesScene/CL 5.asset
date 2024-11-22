@@ -21,6 +21,6 @@ MonoBehaviour:
     expect to like what\r\nyou find."
   AudioClip: {fileID: 8300000, guid: 21d3183d156e2344dbd9fffa80be0c22, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: 785ce49a52ac9a24494524c75eaffb92, type: 2}
   Events: []
   RequiresInteraction: 0

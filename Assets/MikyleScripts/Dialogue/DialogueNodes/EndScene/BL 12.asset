@@ -19,6 +19,6 @@ MonoBehaviour:
     I\u2019ve ever put on canvas."
   AudioClip: {fileID: 8300000, guid: 311bfaac9855d14418b36d97892dc65a, type: 3}
   Options: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 11400000, guid: c8ff571422b517b4f8c829fc5dd7662c, type: 2}
   Events: []
   RequiresInteraction: 0

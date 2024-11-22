@@ -16,7 +16,11 @@ MonoBehaviour:
   Speaker: 'Alex:'
   DialogueText: Why don't you hold onto it
   AudioClip: {fileID: 8300000, guid: e61433abf57d2bd458de1ef695a74a02, type: 3}
-  Options: []
+  Options:
+  - Text: Uh... sure
+    NextNode: {fileID: 11400000, guid: d8fbedad979a8be45b632390e22b7239, type: 2}
+  - Text: Thanks!
+    NextNode: {fileID: 11400000, guid: 75beeeca91156894dbf5ef382230256b, type: 2}
   NextNode: {fileID: 0}
   Events: []
   RequiresInteraction: 0
