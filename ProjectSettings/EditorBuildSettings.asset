@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Campsite 1.unity
-    guid: 7eaf88358a0adbc4c9f24daa01e6909b
+    path: Assets/Scenes/Campsite1.unity
+    guid: a77f7474e78f88945afe50a2e437d903
   - enabled: 1
-    path: Assets/Scenes/LevelOne.unity
-    guid: 4f6ea693da1dc094bb1e441d43f7123b
+    path: Assets/Scenes/Alex.unity
+    guid: 5b8f037cebc1cc34ea308d364d11287b
+  - enabled: 1
+    path: Assets/Scenes/Becca.unity
+    guid: 48a5d6200bb302c4385a304c5dc67a74
+  - enabled: 1
+    path: Assets/Scenes/Charles.unity
+    guid: 128c978acf9ff934e92e9f7a57ed8343
+  - enabled: 1
+    path: Assets/Scenes/Evelyn.unity
+    guid: 8e3a2f3ff8bf6fd49bdd1d874a3c2fb0
+  - enabled: 1
+    path: Assets/Scenes/Campsite2.unity
+    guid: 7eaf88358a0adbc4c9f24daa01e6909b
   m_configObjects: {}

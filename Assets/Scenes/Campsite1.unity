@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 111562a3debafbc4180110d3427f8c1f, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7763817942b8089469cff6db1f40c9b1, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -9225,6 +9225,8 @@ MonoBehaviour:
   ChoicePanel: {fileID: 641239924}
   choiceButtons: []
   AudioSource: {fileID: 505088605}
+  isTyping: 0
+  waitingForInput: 0
 --- !u!4 &1139251997
 Transform:
   m_ObjectHideFlags: 0

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1a40d28464d4945b4187dbf53464e0, type: 3}
   m_Name: SceneOneLoadEvent
   m_EditorClassIdentifier: 
-  nextLevel: LevelOne
+  Duration: 0
+  nextLevel: Alex
